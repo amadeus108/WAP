@@ -3,9 +3,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class dddd {
+public class DBconn {
 	final static String selectSQL = "select * from admin";
-	public dddd()
+	public DBconn()
 	{
 		
 		String driver = "oracle.jdbc.driver.OracleDriver"; //
@@ -49,7 +49,7 @@ public class dddd {
 	}
 	public static void main(String[] args)
 	{
-		dddd db = new dddd();
+		DBconn db = new DBconn();
 		
 	}
 }

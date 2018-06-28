@@ -148,7 +148,5 @@ public class Client {
 				+ ", sul_date=" + sul_date + ", tax_email=" + tax_email + ", pro_img=" + pro_img + ", last_addr="
 				+ last_addr + ", ye_name=" + ye_name + ", account=" + account + "]";
 	}
-	
-	
-	
+
 }
