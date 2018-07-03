@@ -1,4 +1,4 @@
-package com.wap.web.entity;
+package com.wap.client.service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Scanner;
+
+import com.wap.web.entity.Client;
+import com.wap.web.entity.ProjectService;
 
 public class ClientDAO {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -77,7 +80,7 @@ public class ClientDAO {
 		con.close();
 	}
 
-	void getClientsList() throws ClassNotFoundException, SQLException {
+	List<Client> getClientsList() throws ClassNotFoundException, SQLException {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@211.238.142.251:1521:orcl", "c##wapadmin",
 				"2130admin");
@@ -89,6 +92,7 @@ public class ClientDAO {
 		String id = "";
 		String pwd = "";
 		String email = "";
+		
 
 		while (rs.next()) {
 			Client client = new Client(rs.getString("id"), rs.getString("pwd"), rs.getString("email"),
@@ -97,8 +101,10 @@ public class ClientDAO {
 					rs.getString("tax_email"), rs.getString("pro_img"), rs.getString("last_addr"),
 					rs.getString("ye_name"), rs.getString("account"));
 
-			System.out.println(client);
+			this.getClientsList().add(client);
+			
 		}
 		con.close();
+		return null;
 	}
 }
