@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-h1, h3 {
+<!--  h1, h3 {
 	color: blue;
 }
 
@@ -23,157 +22,170 @@ h1[class="h1"] {
 /* #h2 {color :green;}  //작을 수록 우선순위가 높음
    h1{color:orange};
    .h1{color:red};
- */
-</style>
+ */-->
+
 <link href="../css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-	<!--    header 영역 -->
-	<header id="header">
-		<div id="content-container">
-			<h1 class="li">뉴렉처 온라인</h1>
+   <!-- header 영역 -->
+   <header id="header">
+      <div class="content-container">
+         <h1>뉴렉처 온라인</h1>
+         <!-- 제목 h1은 문서에서 한번만 와야한다 -->
 
-			<section>
-				<h1>헤더</h1>
+         <h2>헤더</h2>
 
-				<nav id="visual">
-					<h3>메인메뉴</h3>
-					<ul>
-						<li class="first"><a href="">학습가이드</a></li>
-						<li><a href="">강좌선택</a></li>
-						<li class="last"><a href="">AnswerIs</a></li>
-					</ul>
-				</nav>
+         <nav id="main-menu">
+            <h3>메인 메뉴</h3>
+            <ul>
+               <li class="first"><a href="">학습가이드</a></li>
+               <li><a href="">강좌선택</a></li>
+               <li class="last"><a href="">AnswerIs</a></li>
+            </ul>
+         </nav>
 
-				<h3>강좌검색폼</h3>
-				<form>
-					<fieldset>
-						<legend>검색필드</legend>
-						<label id="a">과정검색</label> <input type="text" /> <input
-							type="button" value="검색" />
-					</fieldset>
-				</form>
+         <!-- 입력폼 -->
+         <nav id="search-form">
+            <h1>강좌 검색 폼</h1>
+            <form class="h1">
+               <fieldset>
+                  <!-- 필드 지정 -->
+                  <legend>검색필드</legend>
+                  <!-- 필드명?필드이름? -->
+                  <label>과정검색</label>
+                  <!-- 어떤걸 검색할지 -->
+                  <input type="text" /> <input type="button" value="검색" />
+               </fieldset>
+            </form>
+         </nav>
 
-				<h3 class="li">회원메뉴</h3>
-				<ul>
-					<li>HOME</li>
-					<li>로그인</li>
-					<li>회원가입</li>
-				</ul>
+         <div>
+            <h3 id="a">회원메뉴</h3>
+            <ul>
+               <li>HOME</li>
+               <li>로그인</li>
+               <li>회원가입</li>
+            </ul>
+         </div>
 
-				<h3>안내</h3>
-				<ul>
-					<li class="li">마이페이지</li>
-					<li class="li">고객센터</li>
-				</ul>
-			</section>
-		</div>
-	</header>
+         <div>
+            <h3>고객센터메뉴</h3>
+            <ul>
+               <li>마이페이지</li>
+               <li>고객센터</li>
+            </ul>
+         </div>
+      </div>
+   </header>
+   <!-- visual 이미지 영역 -->
+   <div id="visual"></div>
+   <!-- body 영역 -->
+   <div id="body">
+      <div class="content-container clearfix">
+         <!-- 클래스 이름을 여러개 쓸수 있다 -->
+         <!-- aside 영역  -->
+         <aside id="aside">
+            <h2>고객센터</h2>
+            <!-- 각 영역을 이끄는 제목은 h2 -->
 
-	<!--visual 영역-->
-	<div id="visual"></div>
+            <div>
+               <h3>고객센터메뉴</h3>
+               <ul class="h1">
+                  <li>공지사항</li>
+                  <li>자주하는 질문</li>
+                  <li>수강문의</li>
+                  <li>이벤트</li>
+               </ul>
+            </div>
 
-	<!--body 영역 -->
-	<div id="body">
-		<!--aside 영역 -->
-		<div>
-			<h2>고객센터</h2>
+            <div>
+               <h3>협력업체</h3>
+               <ul>
+                  <li>노트펍스</li>
+                  <li>나무랩연구소</li>
+                  <li>한빛미디어</li>
+                  <li>에이콘아카데미</li>
+                  <li>쌍용교육센터</li>
+               </ul>
+            </div>
+         </aside>
+         <!-- main 영역 -->
+         <main id="main">
+         <h2>공지사항</h2>
 
-			<h3>고객센터메뉴</h3>
+         <div>
+            <h3>경로</h3>
+            <ol>
+               <li>home</li>
+               <li>고객센터</li>
+               <li>공지사항</li>
+            </ol>
+         </div>
 
-			<ul>
-				<li>공지사항</li>
-				<li>자주하는 질문</li>
-				<li>수강문의</li>
-				<li>이벤트</li>
-			</ul>
+         <form>
+            <input type="text" /> <input type="button" value="검색" />
+         </form>
 
-			<h3>협력업체</h3>
+         <div>
+            <h3>공지사항표</h3>
+            <table border="1">
+               <thead>
+                  <tr>
+                     <td>번호</td>
+                     <td>제목</td>
+                     <td>작성자</td>
+                     <td>작성일</td>
+                     <td>조회수</td>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>10</td>
+                     <td>서비스 중지 사유에 대해서..</td>
+                     <td>newlec</td>
+                     <td>2018-06-16</td>
+                     <td>82</td>
+                  </tr>
+                  <tr>
+                     <td>9</td>
+                     <td>당분간 서비스를 중지합니다.</td>
+                     <td>newlec</td>
+                     <td>2018-06-14</td>
+                     <td>72</td>
+                  </tr>
+                  <!-- 8   리눅스와 CSS3 강의가 오픈되었습니다.   newlec   2018-03-30   248
+                     7   웹 퍼블리싱 HTML5 편이 완강 되었습니다.   newlec   2018-03-30   209
+                     6   포인트 제도 알고 계신가요?   newlec   2018-03-21   233
+                     5   점검시간 안내   newlec   2018-03-09   243
+                     4   지원브라우저   newlec   2018-03-07   257
+                     3   카드 결제 가능합니다.   newlec   2018-03-05   157
+                     1   뉴렉처 시스템이 달라졌습니다.   newlec   2018-03-04   190
+                     2   기존에 가입한 회원 정보는 더 이상 유효하지 않습니다.   newlec   2018-03-04   157 -->
+               </tbody>
+            </table>
+         </div>
 
-			<ul>
-				<li>노트펍스</li>
-				<li>나무랩연구소</li>
-				<li>한빛미디어</li>
-				<li>에이콘아카데미</li>
-				<li>쌍용교육센터</li>
-			</ul>
-		</div>
-		<!--main 영역 -->
-		<main>
-		<h2>회원가입</h2>
+         <div>
+            <h3>페이지 인덱스</h3>
+            <div>1 / 1 pages</div>
+         </div>
 
-		<h3>회원가입폼</h3>
-		<form action="join" method="post">
-			<table border="1">
-				<tr>
-					<th>사진</th>
-					<td><input type="file" />사진선택</td>
-				</tr>
-				<tr>
-					<th>아이디</th>
-					<td><input type="text" required="required"
-						placeholder="영문과 숫자 6~20자 이내" /></td>
-				</tr>
-				<tr>
-					<th>비밀번호</th>
-					<td><input type="password" placeholder="비밀번호 입력" /></td>
-				</tr>
-				<tr>
-					<th>비밀번호 확인</th>
-					<td><input type="text"></td>
-				</tr>
-				<tr>
-					<th>이름</th>
-					<td><input type="text"></td>
-				</tr>
-				<tr>
-					<th>나이</th>
-					<td><input type="number" min="2" max="200"></td>
-				</tr>
-
-				<tr>
-					<th>성별</th>
-					<td><select>
-							<option selected="selected">선택</option>
-							<option>남성</option>
-							<option>여성</option>
-					</select></td>
-				</tr>
-				<tr>
-					<th>생년월일</th>
-					<td><input type="date" placeholder="연도,월,일"> <input
-						type="radio" name="solar"><label>양력</label> <input
-						type="radio" name="solar"><label>음력</label></td>
-				</tr>
-				<tr>
-					<th>핸드폰번호</th>
-					<td><input type="text" required="required"
-						pattern="^\d{3}-\d{3,4}-\d{4}$"
-						placeholder="-를 포함 : 예)010-1111-2222"></td>
-				</tr>
-				<tr>
-					<th>이메일</th>
-					<td><input type="text" required="required"
-						pattern="^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$"
-						placeholder="예)user@newlecture.com"></td>
-				</tr>
-				<tr>
-					<th>다음 계산 결과는? 27+3=</th>
-					<td><input type="text" placeholder="왼쪽 계산식의 결과를 입력하세요."></td>
-				</tr>
-				<tr>
-					<td colspan="2">인터넷 익스플로러 사용자는 위의 계산식 이미지가 깨져 보일 수 있습니다. 크롬을
-						이용해주세요.</td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center"><input type="submit" value="확인"></td>
-				</tr>
-			</table>
-		</form>
-		</main>
-
-
-	</div>
-	<footer id="footer"> </footer>
+         <div>
+            <h3>페이저</h3>
+            <div>이전</div>
+            <ul>
+               <li>1</li>
+               <li>2</li>
+               <li>3</li>
+               <li>4</li>
+               <li>5</li>
+            </ul>
+            <div>다음</div>
+         </div>
+         </main>
+      </div>
+   </div>
+   <!-- footer 영역 -->
+   <footer id="footer"></footer>
 </body>
 </html>
