@@ -36,3 +36,8 @@ body{
 	margin-right: auto;
 }
 
+/* -------마이WAP 메인 페이지---------- */
+#layout-form{
+	display: flex;
+}
+

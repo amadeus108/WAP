@@ -41,6 +41,16 @@ public class Notice {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	
+	
+	
+
+	//for notice selecting
+	public Notice(String title, Date reg_date) {
+		super();
+		this.title = title;
+		this.reg_date = reg_date;	
+	}
 
 	public Notice(int id, Date reg_date, String title, String content) {
 		super();
