@@ -1,0 +1,420 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	font-family: "Nanum Gothic", "Apple SD Gothic Neo", "맑은 고딕",
+		"Malgun Gothic", "AppleGothic", "돋움", Dotum, Helvetica, Arial,
+		sans-serif;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555;
+	background-color: #f3f4f7;
+	height: 100%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/* -------------------header styleing-------------------------- */
+.nav-main {
+	background-color: #2d3a45;
+	height: 50px;
+	min-width: 1080px;
+}
+
+#header {
+	height: 50px;
+	background-color: yellow;
+}
+
+#sub-header {
+	height: 50px;
+	background-color: orange;
+	margin-bottom: 20px;
+}
+/* -------------------header styleing end -------------------------- */
+.page {
+	display: block;
+	min-height: 300px;
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content-container {
+	height: 100%;
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.aside {
+	width: 330px;
+	height: 290px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.aside>h1 {
+	display: none;
+}
+
+.sidebar {
+	list-style: none;
+	padding: 1px 1px;
+}
+
+.sidebar>li {
+	display: block;
+	padding: 4px 0;
+}
+
+/* --------------메인 영역---------------------- */
+.content {
+	/*    float: left; */
+	width: 790px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.content-inner {
+	padding: 30px;
+	border: 1px solid #dedede;
+}
+
+#page-align {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1080px;
+}
+
+.content-header {
+	padding: 30px;
+	margin: 30px;
+	margin-bottom: 5px;
+	background-color: #fff;
+	border-radius: 3px;
+	border-bottom-width: 2px;
+	border: 1px solid #dedede;
+}
+
+.content-header h1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content-header p {
+	font-size: 15px;
+	color: #999;
+	margin-top: 10px;
+	display: block;
+}
+
+.content-inner {
+	padding: 30px;
+	margin: 30px;
+	margin-bottom: 5px;
+	background-color: #fff;
+	border-radius: 3px;
+	border-bottom-width: 2px;
+	border: 1px solid #dedede;
+}
+
+#membertype {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* -------마이WAP 메인 페이지---------- */
+#layout-form {
+	display: flex;
+}
+
+#head-title-name {
+	font-size: 24px;
+	font-family: inherit;
+	font-weight: 700;
+	line-height: 1.1;
+	color: inherit;
+	text-rendering: optimizelegibility;
+}
+
+#title-name {
+	font-size: 18px;
+	font-family: inherit;
+	font-weight: 700;
+	line-height: 1.1;
+	color: inherit;
+	text-rendering: optimizelegibility;
+}
+
+#main-link {
+	text-decoration: none;
+	color: #2099bb;
+	font-size: 12px;
+	float: right;
+	font-weight: bold;
+	text-align: right;
+}
+
+#main-link:hover {
+	border-bottom: 1px solid #2099bb;
+}
+
+#title-link {
+	text-decoration: none;
+	color: #2099bb;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: left;
+}
+
+#title-link:hover {
+	border-bottom: 1px solid #2099bb;
+}
+
+#profile-img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	float: left;
+	border: 1px solid #dedede;
+}
+
+#more {
+	font-size: 12px;
+	color: #454545;
+	line-height: 1.25;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 0;
+	padding-bottom: 1px;
+	text-decoration: none;
+}
+
+#more:hover {
+	color: #2099bb;
+}
+
+#table-col-name {
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #dedede;
+	vertical-align: bottom;
+	padding: 8px;
+	line-height: 1.428571429;
+	text-align: left;
+}
+/* -------메인 페이지의 뉴스센터 테이블------------ */
+#newcenter-table {
+	font-family: 돋움, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#newcenter-table table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+#newcenter-table h1 {
+	display: none;
+}
+
+#newcenter-table thead {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#newcenter-table tr {
+	height: 30px;
+	text-align: left;
+}
+
+#newcenter-table thead tr .title {
+	text-align: left;
+}
+
+#newcenter-table td {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#newcenter-table tbody .title {
+	text-align: left;
+	text-indent: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: calc(100% -320px);
+	text-overflow: ellipsis;
+}
+
+#newcenter-table .reg-date {
+	width: 100px;
+}
+
+#newcenter-table tbody a {
+	text-decoration: none;
+	color: #808080;
+}
+
+#newcenter-table tbody a:hover {
+	color: #2099bb;
+}
+
+/* -------메인 페이지의 관심프로젝트 테이블------------ */
+#interested-project-table {
+	font-family: 돋움, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#interested-project-table table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+#interested-project-table h1 {
+	display: none;
+}
+
+#interested-project-table thead {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#interested-project-table tr {
+	height: 30px;
+	text-align: left;
+}
+
+#interested-project-table thead tr .title {
+	text-align: left;
+}
+
+#interested-project-table td {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#interested-project-table tbody .title {
+	text-align: left;
+	text-indent: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: calc(100% -410px);
+	text-overflow: ellipsis;
+}
+
+#interested-project-table .cost {
+	width: 130px;
+}
+
+#interested-project-table .period {
+	width: 100px;
+}
+
+#interested-project-table .end-date {
+	width: 130px;
+}
+
+#interested-project-table .heart {
+	width: 50px;
+}
+
+#interested-project-table tbody a {
+	text-decoration: none;
+	color: #808080;
+}
+
+#interested-project-table tbody a:hover {
+	color: #2099bb;
+}
+
+/* --------signup form---------------------- */
+.signup-form {
+	border-right: 1px solid #dedede;
+	box-sizing: border-box;
+	padding-left: 45px;
+}
+
+/* ---------signup-checkbox------------- */
+#checkbox {
+	display: inline;
+	font-weight: normal;
+	cursor: pointer;
+	margin-bottom: 100px;
+	margin-top: 100px;
+	min-height: 27px;
+	padding: 100px 100px 100px 200px;
+	box-sizing: border-box;
+}
+
+#checkbox span {
+	font-size: 14px;
+}
+
+/* ----------facebook signup---------------- */
+#signup-aside {
+	padding-right: 14px;
+	padding-left: 35px;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 308.5px;
+	margin-top: 10px;
+}
+
+/* ---------find password form------------------- */
+.find-pwd-form {
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.guide-success {
+	float: left;
+	margin-right: 20px;
+	vertical-align: middle;
+	border: 0;
+}
+
+.find-pwd-text {
+	float: left;
+	box-sizing: border-box;
+}
+
+.find-pwd-text p {
+	margin-bottom: 0px;
+	line-height: 18px;
+	margin: 0 0 10px;
+	display: block;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+#already-member {
+	margin-top: 10px;
+	padding-top: 10px;
+	/* border-top: 1px dashed #dedede; */
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 25px;
+	/* border-bottom: 1px dashed #dedede; */
+	margin-bottom: 30px;
+	padding-left: 0;
+	font-size: 16px
+}
+
+#already-member a {
+	color: #2099bb;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Nanum Gothic", "Apple SD Gothic Neo", "맑은 고딕",
+		"Malgun Gothic", AppleGothic, 돋움, Dotum, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#already-member a:hover {
+	border-bottom: 1px solid #2099bb;
+}

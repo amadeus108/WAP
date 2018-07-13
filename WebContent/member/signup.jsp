@@ -1,5 +1,12 @@
+<%@page import="com.wap.web.entity.Client"%>
+<%@page import="java.util.List"%>
+<%@page import="com.wap.service.SignupService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,134 +27,128 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <!-- [endif] -->
 
+<script type="text/javascript">
+	function checkValue() {
+		if (document.userInfo.pwd.value != document.userInfo.pwdcheck.value) {
+			alert("비밀번호를 동일하게 입력하세요.");
+			return false;
+		}
+	}
+</script>
+
 </head>
 <body>
-	<div class="content">
+<!-- -------header 영역-------------------------------- -->
+	<header class="header">
+		<nav class="nav-main">
+			<div class="container"></div>
+		</nav>
+		<div id="sub-header"></div>
+	</header>
+	<!-- -------header 영역 끝------------------------------- -->
+
+	<!-- -------page 영역-------------------------------- -->
+	<div class="page">
+
+		<!-- -------page-header 영역-------------------------------- -->
 		<div class="content-header">
 			<section>
 				<h1>회원가입</h1>
-				<a>WAP에 오신 것을 환영합니다.</a>
+				<p>WAP에 오신 것을 환영합니다.</p>
 			</section>
 		</div>
+		<!-- -------page-header 영역 끝-------------------------------- -->
+
 		<div class="content-inner">
-			<div class="row">
-				<div class="col-sm-8">
-					<form action="signup" method="post">
-						<div class="form-group row">
+		<div class="content-container">
+				<div class="content">
+					<form action="/member/signup" method="post" name="userInfo"
+						onsubmit="return checkValue()">
 							<label for="staticEmail" class="col-sm-2 col-form-label"><a
 								style="color: red;">*</a>이용목적</label>
-							<div class="col-sm-10">
 								<div id="membertype">
-									<div style="float: left;">
-										<div>
-											<a>프로젝트를 의뢰하고 싶습니다.</a>
-										</div>
-										<div>
+										<a>프로젝트를 의뢰하고 싶습니다.</a>
 											<img id="signup" src="../images/signup_client_usage.png">
-										</div>
-										<div>
-											<input type="radio" name="type">
-										</div>
-										<div>
-											<a>클라이언트</a>
-										</div>
-										<div>
-											<a>-----------------</a>
-										</div>
-										<div>
-											<small id="emailHelp" class="form-text text-muted">의뢰할
+										<input type="radio" name="type" value="client">
+										<a>클라이언트</a>
+										<small id="emailHelp" class="form-text text-muted">의뢰할
 												프로젝트가 있는 기업,개인</small>
-										</div>
-									</div>
-
-									<div style="float: left;">
-										<div>
-											<a>일거리를 찾고 있습니다.</a>
-										</div>
-										<div>
+											<a>일거리를 찾고 있습니다.</a>	
 											<img id="signup" src="../images/signup_partner_usage.png">
-										</div>
-										<div>
-											<input type="radio" name="type">
-										</div>
-										<div>
-											<a>파트너스</a>
-										</div>
-										<div>
-											<a>-----------------</a>
-										</div>
-										<div>
+										
+											<input type="radio" name="type" value="partner">
+										
+										
 											<small id="emailHelp" class="form-text text-muted">프로젝트를
 												수주하고자 하는 기업,개인</small>
-										</div>
+										
 									</div>
-								</div>
-							</div>
-						</div>
-						<div class="form-group row">
+						
 							<label for="inputPassword" class="col-sm-2 col-form-label"><a
 								style="color: red;">*</a>이메일</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control"
+							
+								<input type="email" class="form-control"
 									pattern="^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$"
-									id="formGroupExampleInput" required="required">
-							</div>
-						</div>
-						<div class="form-group row">
+									id="formGroupExampleInput" required="required" name="email">
+							
+						
 							<label for="inputPassword" class="col-sm-2 col-form-label"><a
 								style="color: red;">*</a>아이디</label>
-							<div class="col-sm-10">
+							
 								<input type="text" class="form-control"
-									id="formGroupExampleInput2" required="required">
-							</div>
-						</div>
-						<div class="form-group row">
+									id="formGroupExampleInput2" required="required" name="id">
+							
+					
+						
 							<label for="inputPassword" class="col-sm-2 col-form-label"><a
 								style="color: red;">*</a>비밀번호</label>
-							<div class="col-sm-10">
+							
 								<input type="password" class="form-control"
-									id="formGroupExampleInput2" required="required">
-							</div>
-							<small id="emailHelp" class="form-text text-muted">비밀번호는
-								8자 이상 32자 이하로 입력해 주세요.</small>
-						</div>
-						<div class="form-group row">
+									id="formGroupExampleInput2" required="required" name="pwd">
+							
+							<span id="small"><small id="emailHelp" class="form-text text-muted">비밀번호는
+								8자 이상 32자 이하로 입력해 주세요.</small></span>
+						
 							<label for="inputPassword" class="col-sm-2 col-form-label"><a
 								style="color: red;">*</a>비민번호 재입력</label>
-							<div class="col-sm-10">
+							
 								<input type="password" class="form-control"
-									id="formGroupExampleInput2" required="required">
-							</div>
-							<small id="emailHelp" class="form-text text-muted">동일한
-								비밀번호를 입력해 주세요.</small>
-						</div>
-						<input type="checkbox"> <a href="">이용약관</a> 및 <a href="">개인정보
-							처리방침</a>에 동의합니다. <br>
+									id="formGroupExampleInput2" required="required" name="pwdcheck">
+							
+							<span id="small"><small id="emailHelp" class="form-text text-muted">동일한
+								비밀번호를 입력해 주세요.</small></span>
+						
+						<label id ="checkbox">
+						<input type="checkbox" required="required"> <span><a
+							href="">이용약관</a> 및 <a href="">개인정보 처리방침</a>에 동의합니다.</span></label>
 						<button type="submit" class="btn btn-primary btn-lg btn-block">회원가입</button>
 					</form>
 				</div>
+<!-- -------사이드바 영역-------------------------------- -->
+				<aside class="aside">
+					<form action="/facebook/connect/?facebook_login=1"
+						class="form-horizontal signup-aside-facebook has-validation-callback"
+						id="facebook-connect-form" method="post">
+						<input name="csrfmiddlewaretoken" type="hidden"
+							value="M5Gc083HerECMxpX2dueKiWJ3WvpT6NM"><input
+							name="register_next" type="hidden"
+							value="/accounts/signup/facebook/">
+						<div class="form-group">
+							<div id="already-member">
+								<strong>페이스북 계정이 있으신가요?</strong> <a href=""><img
+									alt="페이스북으로 회원가입" src="../images/facebook-login.png"> </a>
 
-				<div class="col-sm-4">
-					<aside>
-					
-					<div class="form-group">
-							<div class="btn-block-wrapper">
-								<strong>페이스북 계정이 있으신가요?</strong>
-								<div id="spinner"
-									style="background: #4267b2; border-radius: 5px; color: white; height: 40px; text-align: center; width: 250px;">
-									페이스북으로 로그인
-									<div class="fb-login-button" data-max-rows="1"
-										data-size="large" data-button-type="continue_with"
-										data-use-continue-as="true"></div>
-								</div>
 							</div>
 						</div>
-							<a>이미 회원이신가요? </a><a href="../member/login.jsp">로그인</a>
-					</aside>
+					</form>
+					<p id="already-member">
+							이미 회원이신가요? <a href="../member/login.jsp">로그인</a>
+						</p>
+				</aside>
+				<!-- -------사이드바 영역 끝-------------------------------- -->
 				</div>
 			</div>
 		</div>
-	</div>
 </body>
 
 

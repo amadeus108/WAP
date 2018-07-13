@@ -32,6 +32,8 @@ public class MemberService extends HttpServlet{
 		pst.setString(3, email);
 		pst.executeUpdate();
 
+		
+		pst.close();
 		con.close();
 		}catch(Exception e) {
 			System.out.println(e.getMessage());		

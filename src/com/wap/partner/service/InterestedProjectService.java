@@ -1,13 +1,14 @@
-package com.wap.service;
+package com.wap.partner.service;
 
 import java.sql.*;
 import java.util.*;
 
 import com.wap.web.entity.*;
 
-public class NoticeService {
-	public List<Notice> getNoticeList(int pageNo) {
-		List<Notice> list = new ArrayList();
+public class InterestedProjectService {
+	
+	public List<Project> getIPList() {
+		List<Project> list = new ArrayList();
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String id = "c##wapadmin";
@@ -25,8 +26,8 @@ public class NoticeService {
 			ResultSet rs = st.executeQuery();
 
 			while (rs.next()) {
-				Notice notice = new Notice(rs.getString("title"), rs.getDate("reg_date"));
-				list.add(notice);
+				Project project = new Project(rs.getString("title"), rs.getDate("reg_date"));
+				list.add(project);
 			}
 			rs.close();
 			st.close();
@@ -35,6 +36,7 @@ public class NoticeService {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
 		return list;
 	}
 }

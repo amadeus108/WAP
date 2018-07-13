@@ -24,33 +24,47 @@
 
 </head>
 <body>
-	<div class="content">
+	<!-- -------header 영역-------------------------------- -->
+	<header class="header">
+		<nav class="nav-main">
+			<div class="container"></div>
+		</nav>
+		<div id="sub-header"></div>
+	</header>
+	<!-- -------header 영역 끝------------------------------- -->
+
+	<!-- -------page 영역-------------------------------- -->
+	<div class="page">
+
+		<!-- -------page-header 영역-------------------------------- -->
 		<div class="content-header">
 			<section>
 				<h1>비밀번호 재설정 메일을 전송하였습니다.</h1>
-				<a>이메일을 확인해 주세요.</a>
+				<p>이메일을 확인해 주세요.</p>
 			</section>
 		</div>
-
+		<!-- -------page-header 영역 끝-------------------------------- -->
 		<div class="content-inner">
-			<div class="row">
-				<div class="col-sm-8">
-					<section>
-				<h1>재설정 메일이 전송되었습니다.</h1>
-				<a>이메일을 확인해 주세요.</a>
-				<br>
-				<a>이메일을 통해 새로운 비밀번호를 설정할 수 있습니다.</a>
-			</section>
-				</div>
+			<div class="content-container">
+				<div class="content">
+					<div class="form-group">
+						<section>
+							<h1>재설정 메일이 전송되었습니다.</h1>
+							<p>이메일을 확인해 주세요.</p>
+							<p>이메일을 통해 새로운 비밀번호를 설정할 수 있습니다.</p>
+						</section>
+					</div>
+					</div>
 
-				<div class="col-sm-4">
-					<aside>
-						<img id="find_pwd" src="../images/accounts_password_reset_done.png">
+					<!-- -------사이드바 영역-------------------------------- -->
+					<aside class="aside">
+						<img id="find_pwd"
+							src="../images/accounts_password_reset_done.png">
 					</aside>
+					<!-- -------사이드바 영역 끝-------------------------------- -->
 				</div>
 			</div>
 		</div>
-	</div>
 </body>
 
 

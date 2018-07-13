@@ -24,27 +24,39 @@
 
 </head>
 <body>
-	<div class="content">
+	<!-- -------header 영역-------------------------------- -->
+	<header class="header">
+		<nav class="nav-main">
+			<div class="container"></div>
+		</nav>
+		<div id="sub-header"></div>
+	</header>
+	<!-- -------header 영역 끝------------------------------- -->
+
+	<!-- -------page 영역-------------------------------- -->
+	<div class="page">
+
+		<!-- -------page-header 영역-------------------------------- -->
 		<div class="content-header">
 			<section>
 				<h1>로그인</h1>
-				<a>WAP에 오신 것을 환영합니다.</a>
+				<p>WAP에 오신 것을 환영합니다.</p>
 			</section>
 		</div>
-
+		<!-- -------page-header 영역 끝-------------------------------- -->
 		<div class="content-inner">
-			<div class="row">
-				<div class="col-sm-8">
-					<form>
+			<div class="content-container">
+				<div class="content">
+					<form action="/loginService" method="post" class="signup-form">
 						<div class="form-group">
 							<label for="exampleInputEmail1"><a style="color: red;">*</a>아이디</label>
-							<input type="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp" placeholder="아이디를 입력하세요">
+							<input type="text" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="아이디를 입력하세요" name="id">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1"><a style="color: red;">*</a>비밀번호</label>
 							<input type="password" class="form-control"
-								id="exampleInputPassword1" placeholder="비밀번호를 입력하세요">
+								id="exampleInputPassword1" placeholder="비밀번호를 입력하세요" name="pwd">
 						</div>
 						<div class="form-check">
 							<label class="form-check-label"> <input type="checkbox"
@@ -52,45 +64,38 @@
 							</label>
 						</div>
 						<button type="submit" class="btn btn-primary btn-lg btn-block">로그인</button>
-						<div class="form-group row">
-							<small id="emailHelp" class="form-text text-muted">비밀번호를
-								잊으셨나요?</small> <a href="../member/find_password.jsp">비밀번호 찾기</a>
+						<div id="already-member">
+							<p>비밀번호를 잊으셨나요?</p>
+							<a href="../member/find_password.jsp">비밀번호 찾기</a>
 						</div>
 					</form>
 				</div>
 
-				<div class="col-sm-4">
-					<aside>
+				<!-- -------사이드바 영역-------------------------------- -->
+				<aside class="aside">
+					<form action="/facebook/connect/?facebook_login=1"
+						class="form-horizontal signup-aside-facebook has-validation-callback"
+						id="facebook-connect-form" method="post">
+						<input name="csrfmiddlewaretoken" type="hidden"
+							value="M5Gc083HerECMxpX2dueKiWJ3WvpT6NM"><input
+							name="register_next" type="hidden"
+							value="/accounts/signup/facebook/">
 						<div class="form-group">
-							<div class="btn-block-wrapper">
-								<strong>이미 페이스북으로 가입하셨다면</strong>
-								<div id="spinner"
-									style="background: #4267b2; border-radius: 5px; color: white; height: 40px; text-align: center; width: 250px;">
-									페이스북으로 로그인
-									<div class="fb-login-button" data-max-rows="1"
-										data-size="large" data-button-type="continue_with"
-										data-use-continue-as="true"></div>
-								</div>
+							<div id="already-member">
+								<strong>이미 페이스북으로 가입하셨다면</strong> <a href=""><img
+									alt="페이스북으로 회원가입" src="../images/facebook-login.png"> </a>
 
 							</div>
 						</div>
-						<p>아직 회원이 아니신가요?</p>
-					    <a href="../member/signup.jsp">회원가입 하기</a>
-						
-					</aside>
-				</div>
+					</form>
+					<p id="already-member">
+						아직 회원이 아니신가요? <a href="../member/signup.jsp">회원가입</a>
+					</p>
+				</aside>
+				<!-- -------사이드바 영역 끝-------------------------------- -->
 			</div>
 		</div>
 	</div>
-	<script>
-	var finished_rendering = function() {
-		console.log("finished rendering plugins");
-		var spinner = document.getElementById("spinner");
-		spinner.removeAttribute("style");
-		spinner.removeChild(spinner.childNodes[0]);
-	}
-	FB.Event.subscribe('xfbml.render', finished_rendering);
-</script>
 </body>
 
 

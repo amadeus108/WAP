@@ -24,44 +24,63 @@
 
 </head>
 <body>
-	<div class="content">
+	<!-- -------header 영역-------------------------------- -->
+	<header class="header">
+		<nav class="nav-main">
+			<div class="container"></div>
+		</nav>
+		<div id="sub-header"></div>
+	</header>
+	<!-- -------header 영역 끝------------------------------- -->
+
+	<!-- -------page 영역-------------------------------- -->
+	<div class="page">
+
+		<!-- -------page-header 영역-------------------------------- -->
 		<div class="content-header">
 			<section>
 				<h1>비밀번호 찾기</h1>
-				<a>계정의 비밀번호를 잊으셨나요?</a>
+				<p>계정의 비밀번호를 잊으셨나요?</p>
 			</section>
 		</div>
-
+		<!-- -------page-header 영역 끝-------------------------------- -->
 		<div class="content-inner">
-			<div class="row">
-				<div class="col-sm-8">
-					<form>
+			<div class="content-container">
+				<div class="content">
+					<form action="">
 						<div class="form-group">
 							<label for="exampleInputEmail1"><a style="color: red;">*</a>이메일</label>
 							<input type="email" class="form-control" id="exampleInputEmail1"
 								aria-describedby="emailHelp">
 						</div>
-						<button type="submit" class="btn btn-primary btn-lg btn-block">비밀번호 찾기</button>
+						<button type="submit" class="btn btn-primary btn-lg btn-block">비밀번호
+							찾기</button>
 					</form>
+					<div class="find-pwd-form">
+						<img src="../images/guide-success.png" class="guide-success">
+						<div class="find-pwd-text">
+							<p>
+								1. 가입시 입력하신 "<strong>이메일</strong>"로 "<strong>임시 비밀번호</strong>"를
+								발송해드립니다.
+							</p>
+							<p>
+								2. 임시 비밀번호를 통해 로그인하신 뒤 <strong>새로운 비밀번호를 설정</strong>할 수 있습니다.
+							</p>
+						</div>
+					</div>
+
 				</div>
 
-				<div class="col-sm-4">
-					<aside>
-						<img id="find_pwd" src="../images/accounts_password_reset.png">
-					</aside>
-				</div>
+
+
+				<!-- -------사이드바 영역-------------------------------- -->
+				<aside class="aside">
+					<img id="find_pwd" src="../images/accounts_password_reset.png">
+				</aside>
+				<!-- -------사이드바 영역 끝-------------------------------- -->
 			</div>
 		</div>
 	</div>
-	<script>
-	var finished_rendering = function() {
-		console.log("finished rendering plugins");
-		var spinner = document.getElementById("spinner");
-		spinner.removeAttribute("style");
-		spinner.removeChild(spinner.childNodes[0]);
-	}
-	FB.Event.subscribe('xfbml.render', finished_rendering);
-</script>
 </body>
 
 
