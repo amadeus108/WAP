@@ -162,6 +162,18 @@ public class Project {
 		this.statue = statue;
 	}
 
+	
+	public Project(String title, String cost, Date end_date, String period) {
+		super();
+		this.title = title;
+		this.cost = cost;
+		this.end_date = end_date;
+		this.period = period;
+	}
+
+
+
+
 	public Project(String id, String title, String skill, String cost, String attach, Date start_date, String favor_type,
 			Date pro_date, Date end_date, String goal, String plan_statue, String exp, String sim, String gov,
 			String content, String period, String statue) {

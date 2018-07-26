@@ -16,24 +16,6 @@ table {
 	border-collapse: collapse;
 }
 
-/* -------------------header styleing-------------------------- */
-.nav-main {
-	background-color: #2d3a45;
-	height: 50px;
-	min-width: 1080px;
-}
-
-#header {
-	height: 50px;
-	background-color: yellow;
-}
-
-#sub-header {
-	height: 50px;
-	background-color: orange;
-	margin-bottom: 20px;
-}
-/* -------------------header styleing end -------------------------- */
 .page {
 	display: block;
 	min-height: 300px;
@@ -48,6 +30,203 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
+}
+/* ----------회원 이름 태그-------------- */
+.user-name-tag {
+	width: 250px;
+	height: 127px;
+	padding: 15px 15px 19px;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	border-bottom-width: 2px;
+	border-radius: 2px;
+	margin-top: 25px;
+	padding: 15px 15px 19px;
+}
+
+.user-name-tag-heading {
+	margin: 0 auto 9px;
+	padding-left: 3px;
+	padding-bottom: 11px;
+	border-bottom: 1px solid #dedede;
+	text-align: left;
+	font-size: 16px;
+	color: #454545;
+	line-height: 19px;
+	font-weight: bold;
+}
+
+.profile-setting {
+	float: right;
+	width: 100px;
+	margin-top: -36px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #2099bb;
+	text-decoration: none;
+}
+
+.profile-setting:hover {
+	text-decoration: underline;
+	color: #2099bb;
+}
+
+.user-name-body {
+	padding-left: 3px;
+	border-top: none;
+	background-color: #fff;
+	font-family: "Nanum Gothic", "Apple SD Gothic Neo", "맑은 고딕",
+		"Malgun Gothic", "AppleGothic", "돋움", Dotum, Helvetica, Arial,
+		sans-serif;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555;
+}
+
+.profile-img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	float: left;
+	border: 1px solid #dedede;
+}
+
+.username {
+	margin-top: 8px;
+	line-height: 16px;
+	font-size: 14px;
+	display: block;
+	float: left;
+	margin: 0;
+	padding-left: 10px;
+	width: 165px;
+	font-weight: bold;
+	line-height: 25px;
+	font-size: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.email {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 5px;
+	font-weight: initial;
+	line-height: 15px;
+	font-size: 13px;
+	display: block;
+	float: left;
+	margin: 0;
+	padding-left: 10px;
+	width: 165px;
+}
+
+/* --------------WAP 히스토리------------------ */
+.partner-history {
+	width: 250px;
+	padding: 15px 15px 19px;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	border-bottom-width: 2px;
+	border-radius: 2px;
+}
+
+.partner-history h1 {
+	margin-top: 1px;
+	margin-bottom: 5px;
+	margin: 0 auto 9px;
+	padding-left: 3px;
+	padding-bottom: 11px;
+	border-bottom: 1px solid #dedede;
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #454545;
+	line-height: 19px;
+	color: #454545;
+}
+
+.partner-history-body {
+	padding-left: 1px;
+	border-top: none;
+	background-color: #fff;
+}
+
+.table-responsive {
+	margin-bottom: 5px;
+	width: 100%;
+	max-width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.table-responsive th {
+	border-top: none;
+	padding: 7px 7px;
+	font-weight: normal;
+	line-height: 26px;
+	text-align: left;
+}
+
+.table-responsive td {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: right;
+	border-top: none;
+	padding: 7px 7px;
+}
+
+.append-unit {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 26px;
+}
+
+/* ------------새로운 소식-------------------- */
+.activity {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	width: 250px;
+	padding: 15px 15px 19px;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	border-bottom-width: 2px;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+
+.activity-heading {
+	margin: 0 auto 9px;
+	padding-left: 3px;
+	padding-bottom: 11px;
+	border-bottom: 1px solid #dedede;
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #454545;
+	line-height: 19px;
+	color: #454545;
+}
+
+.activity-body {
+	height: 250px;
+}
+
+.activity-unit-list {
+	margin-bottom: 0;
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+}
+
+.empty-activity-unit {
+	border-top: none;
+	margin-top: 0;
+	padding: 13px 28px 10px 18px;
+	position: relative;
+	overflow: hidden;
+	font-size: 14px;
 }
 
 .aside {
@@ -73,15 +252,9 @@ table {
 
 /* --------------메인 영역---------------------- */
 .content {
-	/*    float: left; */
-	width: 790px;
+	width: 667px;
 	margin-left: 10px;
 	margin-right: 10px;
-}
-
-.content-inner {
-	padding: 30px;
-	border: 1px solid #dedede;
 }
 
 #page-align {
@@ -120,12 +293,6 @@ table {
 	border-radius: 3px;
 	border-bottom-width: 2px;
 	border: 1px solid #dedede;
-}
-
-#membertype {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 /* -------마이WAP 메인 페이지---------- */
@@ -176,23 +343,17 @@ table {
 	border-bottom: 1px solid #2099bb;
 }
 
-#profile-img {
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
-	float: left;
-	border: 1px solid #dedede;
-}
-
 #more {
 	font-size: 12px;
 	color: #454545;
 	line-height: 1.25;
 	font-weight: bold;
+	border-top: 15px;
 	margin-top: 15px;
 	margin-bottom: 0;
 	padding-bottom: 1px;
 	text-decoration: none;
+	margin-top: 15px;
 }
 
 #more:hover {
@@ -208,6 +369,43 @@ table {
 	line-height: 1.428571429;
 	text-align: left;
 }
+/* -------메인 페이지의 뉴스센터 ------------ */
+.page-count {
+	float: left;
+	margin-top: 4px;
+	margin-right: 5px;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.notice-button-box {
+	float: left;
+	height: 20px;
+	box-sizing: border-box;
+}
+
+.notice-button-box-left {
+	cursor: default;
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+}
+
+.notice-button-box-left:hover {
+	border: 2px solid #2099bb;
+}
+
+.notice-button-box-right {
+	cursor: default;
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+}
+
+.notice-button-box-right:hover {
+	border: 2px solid #2099bb;
+}
+
 /* -------메인 페이지의 뉴스센터 테이블------------ */
 #newcenter-table {
 	font-family: 돋움, Arial, sans-serif;
@@ -295,30 +493,33 @@ table {
 #interested-project-table td {
 	border-bottom: 1px solid #f5f5f5;
 }
+#interested-project-table tr:hover {
+	background-color: #D4DDDC;
+}
 
 #interested-project-table tbody .title {
 	text-align: left;
 	text-indent: 5px;
 	white-space: nowrap;
 	overflow: hidden;
-	width: calc(100% -410px);
+	width: calc(100% -315px);
 	text-overflow: ellipsis;
 }
 
 #interested-project-table .cost {
-	width: 130px;
-}
-
-#interested-project-table .period {
 	width: 100px;
 }
 
+#interested-project-table .period {
+	width: 80px;
+}
+
 #interested-project-table .end-date {
-	width: 130px;
+	width: 120px;
 }
 
 #interested-project-table .heart {
-	width: 50px;
+	width: 15px;
 }
 
 #interested-project-table tbody a {
@@ -329,28 +530,325 @@ table {
 #interested-project-table tbody a:hover {
 	color: #2099bb;
 }
+/* -------메인 페이지의 지원내역 테이블------------ */
+#apply-project-table {
+	font-family: 돋움, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#apply-project-table table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+#apply-project-table h1 {
+	display: none;
+}
+
+#apply-project-table thead {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#apply-project-table tr {
+	height: 30px;
+	text-align: left;
+}
+
+#apply-project-table thead tr .title {
+	text-align: left;
+}
+
+#apply-project-table td {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#apply-project-table tbody .title {
+	text-align: left;
+	text-indent: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: calc(100% -310px);
+	text-overflow: ellipsis;
+}
+#apply-project-table tr:hover {
+	background-color: #D4DDDC;
+}
+
+#apply-project-table .cost {
+	width: 100px;
+}
+
+#apply-project-table .period {
+	width: 80px;
+}
+
+#apply-project-table .end-date {
+	width: 130px;
+}
+
+#apply-project-table tbody a {
+	text-decoration: none;
+	color: #808080;
+}
+
+#apply-project-table tbody a:hover {
+	color: #2099bb;
+}
+/* -------메인 페이지의 미팅예정 테이블------------ */
+#meeting-project-table {
+	font-family: 돋움, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#meeting-project-table table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+#meeting-project-table h1 {
+	display: none;
+}
+
+#meeting-project-table thead {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#meeting-project-table tr {
+	height: 30px;
+	text-align: left;
+}
+
+#meeting-project-table thead tr .title {
+	text-align: left;
+}
+
+#meeting-project-table td {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#meeting-project-table tbody .title {
+	text-align: left;
+	text-indent: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: calc(100% -200px);
+	text-overflow: ellipsis;
+}
+
+#meeting-project-table .cost {
+	width: 100px;
+}
+
+#meeting-project-table .period {
+	width: 100px;
+}
+
+#meeting-project-table tbody a {
+	text-decoration: none;
+	color: #808080;
+}
+
+#meeting-project-table tbody a:hover {
+	color: #2099bb;
+}
+/* -------메인 페이지의 프로젝트진행중 테이블------------ */
+#continuing-project-table {
+	font-family: 돋움, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#continuing-project-table table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+#continuing-project-table h1 {
+	display: none;
+}
+
+#continuing-project-table thead {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#continuing-project-table tr {
+	height: 30px;
+	text-align: left;
+}
+
+#continuing-project-table thead tr .title {
+	text-align: left;
+}
+
+#continuing-project-table td {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#continuing-project-table tbody .title {
+	text-align: left;
+	text-indent: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: calc(100% -380px);
+	text-overflow: ellipsis;
+}
+
+#continuing-project-table .insert-id {
+	width: 70px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#continuing-project-table .cost {
+	width: 70px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#continuing-project-table .period {
+	width: 70px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#continuing-project-table .deadline {
+	width: 70px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#continuing-project-table .skill {
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#continuing-project-table tbody a {
+	text-decoration: none;
+	color: #808080;
+}
+
+#continuing-project-table tbody a:hover {
+	color: #2099bb;
+}
 
 /* --------signup form---------------------- */
+.signup-content {
+	width: 667px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-right: 1px solid #dedede;
+}
+
+.signup-title-element {
+	text-align: right;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 7px;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 160px;
+	font-weight: bold;
+}
+
+.signup-title-element span {
+	font-weight: bold;
+	color: #f48023;
+}
+
+.type-form {
+	padding-bottom: 20px;
+	margin-bottom: 0;
+	border-bottom: 1px dashed #dedede;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 398.5px;
+}
+
+.type-form ul {
+	margin-bottom: 9px;
+	padding-left: 0;
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+	margin: 1em 0;
+}
+
+.type-form li {
+	display: inline-block;
+	margin-right: 0;
+	list-style: none;
+}
+
+.type-form label {
+	width: 190px;
+	margin-bottom: 0;
+	padding-top: 16px;
+	padding-bottom: 14px;
+	border: 1px dashed #dedede;
+	text-align: center;
+	cursor: pointer;
+}
+.type-form label:hover {
+	background-color: #2099bb;
+}
+
+
+.type-form p {
+	margin-bottom: 13px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #666666;
+	line-height: 1;
+	text-align: center;
+	cursor: pointer;
+}
+
+.type-form img {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	margin-bottom: 8px;
+}
+
+.textbox-form {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 20px;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 667px;
+	height: 57px;
+}
+
 .signup-form {
 	border-right: 1px solid #dedede;
 	box-sizing: border-box;
 	padding-left: 45px;
 }
 
-/* ---------signup-checkbox------------- */
-#checkbox {
-	display: inline;
-	font-weight: normal;
-	cursor: pointer;
-	margin-bottom: 100px;
-	margin-top: 100px;
-	min-height: 27px;
-	padding: 100px 100px 100px 200px;
-	box-sizing: border-box;
+.textbox-form a {
+	color: #2099bb;
+	text-decoration: none;
+	font-size: 14px;
 }
 
-#checkbox span {
-	font-size: 14px;
+.textbox-form a:hover {
+	border-color: #2099bb;
+	text-decoration: underline;
 }
 
 /* ----------facebook signup---------------- */
@@ -367,8 +865,7 @@ table {
 
 /* ---------find password form------------------- */
 .find-pwd-form {
-	padding-top: 30px;
-	box-sizing: border-box;
+	border-top: 1px solid #dedede;
 }
 
 .guide-success {
@@ -380,7 +877,6 @@ table {
 
 .find-pwd-text {
 	float: left;
-	box-sizing: border-box;
 }
 
 .find-pwd-text p {
@@ -395,14 +891,12 @@ table {
 #already-member {
 	margin-top: 10px;
 	padding-top: 10px;
-	/* border-top: 1px dashed #dedede; */
 	font-size: 16px;
-	font-weight: bold;
 	padding-bottom: 25px;
-	/* border-bottom: 1px dashed #dedede; */
 	margin-bottom: 30px;
 	padding-left: 0;
-	font-size: 16px
+	font-size: 16px;
+	font-weight: bold;
 }
 
 #already-member a {
@@ -411,8 +905,7 @@ table {
 	box-sizing: border-box;
 	font-family: "Nanum Gothic", "Apple SD Gothic Neo", "맑은 고딕",
 		"Malgun Gothic", AppleGothic, 돋움, Dotum, Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-weight: bold;
+	font-size: 14px;
 }
 
 #already-member a:hover {

@@ -1,0 +1,214 @@
+/* ---reset------------------------------------------------- */
+body{
+	margin: 0px;
+	background-color: #f3f4f7;
+}
+
+h1{
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+ol{
+	padding: 0px;
+	margin: 0px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+ol > li {
+	display: block;
+}
+
+.container{
+	margin: 0px;
+	padding: 0px;
+}
+
+.page{
+	margin: 0px;
+}
+.sidebar{
+	margin: 0px;
+}
+
+/* ---styling------------------------------------- */
+/* ---header style------------------------------------- */
+
+.page{
+	display: block;
+	background-color: #f3f4f7;
+	min-height: 300px;
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content-container{		
+	height: 100%; 
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.aside{
+	background-color:white;
+/* 	float: left; */
+	width:250px;
+	height: 290px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	.aside > h1{
+		display: none;
+	}
+.sidebar{
+	list-style: none;
+	border: 1px solid #dedede;
+/* 	border-radius: 3px;  */
+/* 	border-bottom-width: 2px; */
+	padding: 4px 8px;
+}
+	.sidebar > li {
+		display: block;
+/* 		height: 48px; */
+		padding: 4px 0;
+	}
+	.sidebar > li:hover{
+		background-color: rgb(243, 244, 247);
+	}
+	.sidebar > li > a{
+		display: block;
+		padding: 10px 15px;
+		font-size: 14px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+/* ---content style------------------------------------- */
+.content{
+/* 	float: left; */
+	width: 790px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	.content-inner{
+		display: block;
+		background-color:white;
+		padding: 30px;
+		border: 1px solid #dedede;
+	}
+		.content-inner > section{
+			display: block;
+			box-sizing: border-box;
+		}
+		.content-inner > section > h1{
+			padding-top: 15px;
+			padding-bottom: 30px;
+			border-bottom: 1px dashed #dedede;
+			margin: 0px;
+			font-size: 24px;
+		}
+		.content-inner > section:nth-child(2){
+			text-align: center;
+			font-weight: bold;
+		}
+
+
+/* ---use-menu style------------------------------------- */
+#use-menu{
+/* 	border: 1px solid red; */
+/* 	display: inline-block; */
+}
+	#use-menu > h1{
+		display: none;
+	}
+	#use-menu > ol{
+		overflow: auto;
+		border-top: 1px dashed #dedede;
+		border-bottom: 1px dashed #dedede;
+		display: flex;
+		padding: 25px;
+	}
+		#use-menu > ol > li{
+/* 			float: left; */
+			padding-left: 32px;
+			background: url("../images/icon/rightarrow.png") no-repeat 16px center;
+		}
+		#use-menu > ol > li:first-child{
+			padding-left: 0px;
+			background: none;
+		}
+				#use-menu > ol > li > a:hover{
+			color: gold;
+		}
+.use-menu-box{
+	margin-top: 20px;
+	border-bottom: 1px dashed #dedede;
+}
+
+.use-menu-title{
+	font-size: 20px;
+}
+
+.use-menu-content{
+	margin-top: 15px;
+	margin-left: 35px;
+}
+.use-menu-maintext{
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.use-menu-subtext{
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.use-menu-info{
+	border: 1px solid blue;
+	padding: 15px 15px 5px 15px;
+	margin: 0px 35px 10px 0px;
+}
+	.use-menu-info-line{
+		margin-bottom: 10px;
+	}
+
+.use-menu-info-support{
+	border: 1px solid orange;
+	padding: 15px 15px 5px 15px;
+	margin: 0px 35px 15px 0px;
+	display: flex;
+}
+	.use-menu-info-support-line {
+		padding: 28px 10px 34px 0px;		
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	
+	.use-menu-info-support-cs{
+		border-left: 1px solid #dedede;
+		padding-left: 12px;
+		font-size: 14px;
+	}
+		.cs-title{
+			margin: 6px 0px 13px 50px;
+		}
+		.cs-content{
+			margin-bottom: 8px;
+			font-size: 13px;
+		}
+		
+
+
+
+
+

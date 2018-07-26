@@ -121,6 +121,13 @@ public class Partner {
 	public void setLast_addr(String last_addr) {
 		this.last_addr = last_addr;
 	}
+	
+	//for insertPartnerMember
+	public Partner(String email,String id,String pwd) {
+		this.id = id;
+		this.pwd = pwd;
+		this.email = email;
+	}
 
 	public Partner(String id, String pwd, String email, String intro, String pro_img, String type, String manager,
 			String company, String ceo, String sul_date, String ye_name, String account, String last_addr) {

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	font-family: "Nanum Gothic", "Apple SD Gothic Neo", "맑은 고딕",
+		"Malgun Gothic", "AppleGothic", "돋움", Dotum, Helvetica, Arial,
+		sans-serif;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555;
+	background-color: #f3f4f7;
+	height: 100%;
+}
+
+.account-setting-basic-block-account {
+	margin-bottom: 20px;
+	padding-bottom: 31px;
+	border-bottom: 1px dashed #dedede;
+}
+
+/* --------내가 정의한 스타일------------- */
+
+
+/* 인풋 폼 한줄로 세우기 */
+.form-control {
+    width: 50% !important;
+    height: 34px !important;
+    display: inline;
+}
+
+.partner-info-form li {
+	display: inline;
+	padding-right: 20px;
+}
+.partner-info-form select {
+	float: left;
+}
+
+.partner-select-form {
+	width: 30% !important;
+	height: 34px !important;
+}
+
+.control-wrapper {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 340px;
+	display: inline;
+}
+
+.dropdown-customize {
+	float: left;
+	margin-right: 10px;
+	display: inline;
+}
+
+.submit-btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	border-radius: 2px;
+	color: #fff;
+	background-color: #07b481;
+	border-color: #069b6f;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	border-radius: 2px;
+}
+
+.submit-btn:hover {
+	color: #fff;
+	background-color: #08cd93;
+	border-color: #07b481;
+}
+/* -------내가 정의한 것들 끝---------- */
+.signup-title-element {
+	text-align: right;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 7px;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 160px;
+	font-weight: bold;
+}
+
+.signup-title-element span {
+	font-weight: bold;
+	color: #f48023;
+}
+
+
+.process-guide-box {
+	border: 1px solid #dedede;
+	margin-bottom: 25px
+}
+
+.process-guide-box img {
+	float: left;
+	margin: 15px 20px 0 20px
+}
+
+.process-guide-box .process-guide-title-text {
+	margin-top: 13px; *
+	margin-top: 0 !important;
+	margin-bottom: 15px
+}
+
+.process-guide-box .process-guide-up {
+	margin-top: 16px;
+	margin-bottom: 15px
+}
+
+.process-guide-box .process-guide-up .process-guide-up-title {
+	margin-bottom: 7px;
+	color: #333333;
+	font-weight: bold;
+	line-height: 1
+}
+
+.process-guide-box .process-guide-up .process-guide-up-content {
+	margin-bottom: 0;
+	color: #666666;
+	line-height: 1
+}
+
+.process-guide-box .process-guide-up .process-guide-up-content-type2 {
+	color: #333333;
+	line-height: 1.0
+}
+
+.process-guide-box .process-guide-up .process-guide-up-content-type2 .link
+	{
+	font-weight: bold
+}
+
+.process-guide-box .process-guide-up .process-guide-up-content-type2+.process-guide-up-content-type2
+	{
+	margin-top: 6px
+}

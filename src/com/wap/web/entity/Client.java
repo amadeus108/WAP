@@ -119,6 +119,13 @@ public class Client {
 		this.account = account;
 	}
 	
+	//for insertClientMember
+	public Client(String email,String id,String pwd) {
+		this.id = id;
+		this.pwd = pwd;
+		this.email = email;
+	}
+	
 	public Client(String id, String pwd, String email, String com_name, String phone, String fax, String ceo, String manager,
 			String m_phone, String type, String sul_date, String tax_email, String pro_img, String last_addr,
 			String ye_name, String account) {

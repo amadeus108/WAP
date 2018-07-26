@@ -10,6 +10,18 @@ public class Apply {
 	private Date clientdate;
 	private Date partnerdate;
 	
+	//just for partner-main page list;
+	private String title;
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	
+
 	public Apply() {	}
 
 	public Date getApply_date() {
@@ -59,6 +71,16 @@ public class Apply {
 	public void setPartnerdate(Date partnerdate) {
 		this.partnerdate = partnerdate;
 	}
+	
+	//for partner-main list selecting;
+	public Apply(String title,String apply_cost,String apply_period, Date apply_date) {
+		super();
+		this.apply_date = apply_date;
+		this.apply_cost = apply_cost;
+		this.apply_period = apply_period;
+		this.title = title;
+	}
+	
 
 	public Apply(Date apply_date, String apply_cost, String apply_period, String apply_content, Date clientdate,
 			Date partnerdate) {
@@ -70,6 +92,8 @@ public class Apply {
 		this.clientdate = clientdate;
 		this.partnerdate = partnerdate;
 	}
+
+	
 
 	@Override
 	public String toString() {

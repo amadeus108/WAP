@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.sidebar .sidebar-nav ul {
+	width:76%;
+    list-style: none;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    border-bottom-width: 2px;
+    padding: 4px 8px;
+    background-color: #fff
+}
+
+.sidebar .sidebar-nav ul li {
+    height: 48px;
+    padding: 4px 0
+    
+}
+
+.sidebar .sidebar-nav ul li a {
+    border-radius: 2px;
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+}
+
+.sidebar .sidebar-nav .wishket-business-license-guide-box {
+    background-image: url("/static/img/contract/wishket_business_license_guide.png?ed1ce1d0716e");
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 10px
+}
+
+.sidebar .sidebar-nav .wishket-business-license-guide-box .title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.0;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #454545
+}
+
+.sidebar .sidebar-nav .wishket-business-license-guide-box a {
+    font-size: 12px;
+    margin-right: 10px;
+    line-height: 1.0;
+    font-weight: bold;
+    float: right;
+    cursor: pointer
+}
+
+.sidebar .sidebar-nav .wishket-business-license-guide-box a:hover,
+.sidebar .sidebar-nav .wishket-business-license-guide-box a:active {
+    text-decoration: none
+}
+
+.sidebar .sidebar-nav .wishket-bank-account-guide-box {
+    background-image: url("/static/img/contract/wishket_bank_account_guide.png?ed1ce1d0716e");
+    background-repeat: no-repeat;
+    padding: 15px 22px 4px 23px
+}
+
+.sidebar .sidebar-nav .wishket-bank-account-guide-box .title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.0;
+    color: #454545;
+    text-align: center
+}
+
+.sidebar .sidebar-nav .wishket-bank-account-guide-box .data {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #454545
+}
+
+.sidebar .sidebar-nav ul > li > a:hover, .sidebar .sidebar-nav ul > li > a:active {
+    background-color: #07b481;
+    text-decoration: none
+}
+
+.partners .sidebar .sidebar-nav .badge-info {
+    background-color: #07b481;
+}
+
+.sidebar-nav ul > .active > a, .partners .sidebar .sidebar-nav ul > .active > a:hover {
+    background-color: #07b481;
+    color: #fff
+}
+
+.sidebar-nav ul > .active > a .badge-info, .partners .sidebar .sidebar-nav ul > .active > a:hover .badge-info {
+    background-color: #07b481;
+    color: #07b481
+}
+
+.sidebar-nav .badge-info {
+    background-color: #07b481
+}
+
+.sidebar-nav ul > .active > a, .client .sidebar .sidebar-nav ul > .active > a:hover {
+    color: #fff;
+    background-color: #07b481
+}
+
+.client .sidebar .sidebar-nav ul > .active > a .badge-info, .client .sidebar .sidebar-nav ul > .active > a:hover .badge-info {
+    background-color: #07b481;
+    color: #446eab
+}
