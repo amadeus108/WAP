@@ -119,28 +119,6 @@
 						</div>
 					</form>
 				</div>
-				<!-- -------사이드바 영역-------------------------------- -->
-				<aside class="aside">
-					<form action="/facebook/connect/?facebook_login=1"
-						class="form-horizontal signup-aside-facebook has-validation-callback"
-						id="facebook-connect-form" method="post">
-						<input name="csrfmiddlewaretoken" type="hidden"
-							value="M5Gc083HerECMxpX2dueKiWJ3WvpT6NM"><input
-							name="register_next" type="hidden"
-							value="/accounts/signup/facebook/">
-						<div class="form-group">
-							<div id="already-member">
-								<strong>페이스북 계정이 있으신가요?</strong> <a href=""><img
-									alt="페이스북으로 회원가입" src="../images/facebook-login.png"> </a>
-
-							</div>
-						</div>
-					</form>
-					<p id="already-member">
-						이미 회원이신가요? <a href="login">로그인</a>
-					</p>
-				</aside>
-				<!-- -------사이드바 영역 끝-------------------------------- -->
 			</div>
 		</div>
 	</div>

@@ -12,9 +12,10 @@
 <!-- 부트스트랩 -->
 <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
 <link href="../../css/member/style.min.css" rel="stylesheet">
-<link href="../../css/partner/aside.css" rel="stylesheet">
 <link href="../../css/header.css" rel="stylesheet">
 <link href="../../css/footer.css" rel="stylesheet">
+<link href="../../css/partner/aside.css" rel="stylesheet">
+<link href="../../css/partner/partner-input-form.css" rel="stylesheet">
 
 <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
 <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->

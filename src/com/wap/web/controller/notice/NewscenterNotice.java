@@ -15,15 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 import com.wap.web.entity.Notice;
 import com.wap.web.service.*;
 
-@WebServlet("/notice/notice")
+@WebServlet("/newscenter/notice")
 public class NewscenterNotice extends HttpServlet {
-    public NewscenterNotice() {
-
-    }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String category = "";
+		String category_ = request.getParameter("category");
+		
+		if(category_ !=null && !category_.equals(""))
+			category = category_;
+		
 		int pageNo = 1;
-		String field = "title";
+		String field = "category";
 		String query = "";
 		
 		String pageNo_ = request.getParameter("p");
@@ -43,15 +46,12 @@ public class NewscenterNotice extends HttpServlet {
 		
 		NoticeService service = new NoticeService();
 		
-		list = service.getNoticeList(field, query, pageNo);
-		
-		request.setAttribute("list", list);
-		
 		try {
-			Notice notice = service.getNoticeNotice("category");
-			String a = notice.getCategory(); // all
+			list = service.getNoticeList(field, query, pageNo);
+			int count = service.getNoticeCount(field, query);
 			
-			request.setAttribute("n", notice);
+			request.setAttribute("list", list);
+			request.setAttribute("count", count);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -59,6 +59,7 @@ public class NewscenterNotice extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/notice/notice.jsp");
 		dispatcher.forward(request, response);

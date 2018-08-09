@@ -14,8 +14,8 @@
 					<h1>WAP</h1>
 					<ul>
 						<li>(02) 6925-4849</li>
-						<li>help@wishket.com</li>
-						<li>Kakao ID 친구추가: @wishket</li>
+						<li>help@naver.com</li>
+						<li>Kakao ID 친구추가: @wap</li>
 						<li>고객센터 운영시간: 오전 10시부터 오후 6시까지(공휴일 제외)</li>
 						<li>주식회사 WAP / 사업자등록번호: 209-81-57303 / 대표이사: 박우범</li>
 						<li>서울특별시 강남구 테헤란로43길 18 SC빌딩 4층 (주) WAP</li>
@@ -25,7 +25,7 @@
 				<h1>이용방법</h1>
 				<ul>
 					<li><a href="">서비스 소개</a></li>
-					<li><a href="">클라이언트 이용방법</a></li>
+					<li><a href="../tutorial/ClientUse">클라이언트 이용방법</a></li>
 					<li><a href="">파트너스 이용방법</a></li>
 					<li><a href="">신뢰와 안전</a></li>
 					<li><a href="">이용요금</a></li>
@@ -35,12 +35,10 @@
 				<nav>
 				<h1>뉴스센터</h1>
 				<ul>
-					<li><a href="">전체보기</a></li>
-					<li><a href="">공지사항</a></li>
-					<li><a href="">WAP 소식</a></li>
-					<li><a href="">그린 클라이언트</a></li>
-					<li><a href="">프리랜서 가이드</a></li>
-					<li><a href="">프로젝트 성공사례</a></li>
+					<li><a href="../newscenter/all">전체보기</a></li>
+					<li><a href="../newscenter/notice?p=${i}&f=${param.f}&q=${'공지사항'}">공지사항</a></li>
+					<li><a href="../newscenter/partner?p=${i}&f=${param.f}&q=${'파트너'}">파트너</a></li>
+					<li><a href="../newscenter/wap?p=${i}&f=${param.f}&q=${'WAP 소식'}">WAP</a></li>
 				</ul>
 				</nav>
 				<nav>

@@ -90,7 +90,7 @@
 								</div>
 							</div>
 							<div>
-								<p>무료로 프로젝트 등록하기</p>
+								<p class="project-add-btn">무료로 프로젝트 등록하기</p>
 							</div>
 						</div>
 					</div>

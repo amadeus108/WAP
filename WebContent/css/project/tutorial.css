@@ -1,0 +1,560 @@
+/* ---reset------------------------------------------------- */
+body{
+	margin: 0px;
+	background-color: #f3f4f7;
+}
+
+h1{
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+ol{
+	padding: 0px;
+	margin: 0px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+ol > li {
+	display: block;
+}
+
+.container{
+	margin: 0px;
+	padding: 0px;
+}
+
+.page{
+	margin: 0px;
+}
+.sidebar{
+	margin: 0px;
+}
+
+.h3{
+	
+}
+
+	.header-text{
+		font-size: 24px;
+		font-weight: 700px;
+		line-height: 1.1px;
+		
+		
+	}
+	
+	
+#total_list_num{
+	font-size: 65%;
+	color: #999;
+	font-weight: normal;
+	line-height: 20px;
+	
+	
+}
+
+/* ---styling------------------------------------- */
+/* ---header style------------------------------------- */
+
+.page{
+	display: block;
+	background-color: #f3f4f7;
+	min-height: 300px;
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content-container{		
+	height: 100%; 
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.aside{
+	background-color:white;
+/* 	float: left; */
+	width:250px;
+	height: 290px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	.aside > h1{
+		display: none;
+	}
+.sidebar{
+	list-style: none;
+	border: 1px solid #dedede;
+/* 	border-radius: 3px;  */
+/* 	border-bottom-width: 2px; */
+	padding: 4px 8px;
+}
+	.sidebar > li {
+		display: block;
+/* 		height: 48px; */
+		padding: 4px 0;
+	}
+	.sidebar > li:hover{
+		background-color: rgb(243, 244, 247);
+	}
+	.sidebar > li > a{
+		display: block;
+		padding: 10px 15px;
+		font-size: 14px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+/* ---content style------------------------------------- */
+.form{
+	
+}
+	form-group{
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+		
+	}
+
+.search {
+	
+}
+
+	.search-right{
+		text-align: right;
+		width: 398px;
+		float: left;
+		margin-top: 30px;
+	}
+	
+
+.content{
+/* 	float: left; */
+	width: 790px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* .content-header 추가 with 남지훈 */
+	.content-header{
+		width: 998px;
+		height: 56px;
+		margin:0;
+		margin-bottom: 5px;
+		padding: 30px;
+		background-color: #fff;
+		border-radius: 3px;
+		border-bottom-width: 2px;
+		border: 1px solid #dedede;
+	}
+	
+	.content-inner{
+		display: block;
+		background-color:white;
+		padding: 30px;
+		border: 1px solid #dedede;
+	}
+		.content-inner > section{
+			display: block;
+			box-sizing: border-box;
+		}
+		.content-inner > section > h1{
+			padding-top: 15px;
+			padding-bottom: 30px;
+			border-bottom: 1px dashed #dedede;
+			margin: 0px;
+			font-size: 24px;
+		}
+		.content-inner > section:nth-child(2){
+			text-align: center;
+			font-weight: bold;
+		}
+		
+/* 	.project-content-inner 추가 with 남지훈*/ 
+.project-content-inner{
+	width: 1060px;
+	display: flex;
+	/*background-color:white;*/
+	/*padding: 30px;*/
+	/*border: 1px solid #dedede;*/
+	
+			
+}
+	.project-list-filter-box{
+		margin-left: 0px;
+		width: 168px;
+		height: 100%;
+	
+	}
+
+	.project-list-sort-box{
+		width: 168px;
+		height: 150px;
+		margin-bottom: 5px;
+		padding: 15px 15px 25px;
+		background: #ffffff;
+		border: 1px solid #dedede;
+		bor-radius: 3px;
+		border-bottom-width:2px;
+	}
+		
+		.sort-box-title{
+			margin-bottom: 15px;
+			padding-left: 3px;
+			padding-bottom: 11px;
+			border-bottom: 1px solid #eeeeee;
+			font-size: 14px;
+			font-weight: bold;
+			color: #2d3a45;
+			
+		}
+		
+			.left-box{
+				float: left;
+				margin-left: 10px;
+				padding-right: 13px;
+				border-right: 1px #dedede solid;
+				
+			
+			}
+			
+			.right-box{
+			
+				float: left;
+				padding-left: 15px;
+			
+			}
+			
+				.sort-button{
+					color: #666;
+					font-size: 12px;
+					cursor: pointer;
+				
+				}
+	
+	
+	.project-list-category-box{
+		width: 168px;
+		height: 600px;
+		margin-bottom: 5px;
+		padding: 15px 15px 25px;
+		background: #ffffff;
+		border: 1px solid #dedede;
+		bor-radius: 3px;
+		border-bottom-width:2px;
+	
+	}
+		.category-box-title{
+			margin-bottom: 15px;
+			padding-left: 3px;
+			padding-bottom: 12px;
+			border-bottom: 1px solid #eeeeee;
+			font-weight: bold;
+			font-size: 14px;
+			color: #2d3a45;
+		
+		}
+		
+		.category-selecter{
+			margin-left: 20px;
+		}
+		
+			.category-selecter-list{
+				margin: 0px;
+				padding 0px;
+				list-style-type: none;
+				line-height: 15px;
+			}
+			
+				.child-list{
+					padding-left: 15px;
+				}
+				
+				.child-list li{
+					display: block;
+					margin-top: 6px;
+					height: 16px;
+				
+				}
+			
+					.child-list li label{
+						margin-left: 10px;
+						font-size: 12px;
+						font-weight: 500;
+						color: #333333;
+						display: inline;
+					}
+			
+				.parent label{
+					margin-left: 10px; 
+				
+				}
+			
+				.dev-category-list{
+					display: block;
+				
+				}
+				
+			.design-category-list{
+				
+				margin: 0px;
+				padding 0px;
+				padding-top: 20px;
+				list-style-type: none;
+				line-height: 15px;
+			
+			}
+		
+		
+	
+	.project-list-address-box{
+		width: 168px;
+		height: 113px;
+		margin-bottom: 0px;
+		padding: 15px 15px 25px;
+		background: #ffffff;
+		border: 1px solid #dedede;
+		bor-radius: 3px;
+		border-bottom-width:2px;
+	
+	}
+	
+	.project-list-box{
+		float: left;
+		width: 852px;
+	}
+	
+	.recruiting-project{
+		width: 852px;
+		height: 203px;
+		background: #ffffff;
+		border: 1px solid #dedede;
+		margin-left: 38px;
+		margin-bottom: 5px;
+		
+	}
+	
+	.project-unit-body{
+	
+	}
+	
+		.project-unit-heading{
+			position: relative;
+			margin-bottom: 10px;
+			height: 27px;
+			
+		}
+		
+			.project-title{
+				margin-left: 20px;
+				margin-top: 20px;
+				margin-bottom: 6px;
+				line-height: 1.5;
+				float: left;
+				color: #2099bb;
+				font-size: 18px;
+			}
+			
+			.project-unit-basic-info{
+				margin-left: 20px;
+				float: left;
+				max-height: 20px;
+				width: 900px;
+				height: 20px;
+				padding-bottom: 8px;
+			}
+			
+			.project-unit-basic-info span{
+				padding-right: 10px;
+				margin-right: 10px;
+				border-right: 1px solid #dedede;
+				color: #666;
+				font-weight: bold;
+				font-size: 14px;
+			}
+			
+			.project-unit-desc{
+				min-height: 54px;
+				margin-top: 10px;
+				height: 54px important;
+			}
+			
+			.project-unit-desc p{
+				width: 629px;
+				color: #999;
+				font-size: 13px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				word-wrap: break-word;
+				max-height: 54px;
+				margin-left: 20px;
+			}
+			
+			.outer-info{
+				font-size: 13px;
+    			line-height: 13px;
+    			width: 150px;
+    			float: right;
+    			height: 54px !important;
+			}
+				.outer-info-upper-data{
+					padding: 2px 0 6px;
+    				border-bottom: 1px solid #dedede;
+				}
+				.outer-info-under-data{
+					padding: 8px 0 6px;
+   				 	border-bottom: 1px solid #dedede;
+				}
+				
+			.project-unit-additional-info{
+				margin-left: 20px;
+				margin-top: 20px;
+    			line-height: 18px;
+			}
+			
+			.project-category{
+				color: #999;
+			}
+			.project-subcategory{
+				padding-right: 10px;
+   				border-right: 1px solid #dedede;
+    			margin-right: 10px;
+    			color: #666;
+			}
+			
+			.project-skills-tag-viewbox{
+				display: inline-block;
+    			height: 18px;
+			}
+			
+			.project-skills-tag-viewbox span.info-title{
+			
+				color: #999;
+    			font-size: 14px;
+			
+			}
+			
+			.project-skills-tag-viewbox span.skills-tag{
+			
+				vertical-align: bottom;
+    			display: inline-block;
+    			max-width: 85px;
+    			text-overflow: ellipsis;
+    			white-space: nowrap;
+    			border-radius: 2px;
+    			background-color: #e5e7e8;
+    			padding: 0 7px;
+    			font-size: 12px;
+    			color: #555;
+    			overflow: hidden;
+    			margin-left: 7px;
+				margin-bottom: -1px;
+				
+			}
+			
+			
+	
+/* 	.project-content-inner 추가 with 남지훈*/ 
+	
+		
+
+
+/* ---use-menu style------------------------------------- */
+#use-menu{
+/* 	border: 1px solid red; */
+/* 	display: inline-block; */
+}
+	#use-menu > h1{
+		display: none;
+	}
+	#use-menu > ol{
+		overflow: auto;
+		border-top: 1px dashed #dedede;
+		border-bottom: 1px dashed #dedede;
+		display: flex;
+		padding: 25px;
+	}
+		#use-menu > ol > li{
+/* 			float: left; */
+			padding-left: 32px;
+			background: url("../images/icon/rightarrow.png") no-repeat 16px center;
+		}
+		#use-menu > ol > li:first-child{
+			padding-left: 0px;
+			background: none;
+		}
+				#use-menu > ol > li > a:hover{
+			color: gold;
+		}
+.use-menu-box{
+	margin-top: 20px;
+	border-bottom: 1px dashed #dedede;
+}
+
+.use-menu-title{
+	font-size: 20px;
+}
+
+.use-menu-content{
+	margin-top: 15px;
+	margin-left: 35px;
+}
+.use-menu-maintext{
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.use-menu-subtext{
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.use-menu-info{
+	border: 1px solid blue;
+	padding: 15px 15px 5px 15px;
+	margin: 0px 35px 10px 0px;
+}
+	.use-menu-info-line{
+		margin-bottom: 10px;
+	}
+
+.use-menu-info-support{
+	border: 1px solid orange;
+	padding: 15px 15px 5px 15px;
+	margin: 0px 35px 15px 0px;
+	display: flex;
+}
+	.use-menu-info-support-line {
+		padding: 28px 10px 34px 0px;		
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	
+	.use-menu-info-support-cs{
+		border-left: 1px solid #dedede;
+		padding-left: 12px;
+		font-size: 14px;
+	}
+		.cs-title{
+			margin: 6px 0px 13px 50px;
+		}
+		.cs-content{
+			margin-bottom: 8px;
+			font-size: 13px;
+		}
+		
+
+
+
+
+

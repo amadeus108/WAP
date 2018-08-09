@@ -1,6 +1,7 @@
 package com.wap.web.controller.notice;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -13,14 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.wap.web.entity.Notice;
 import com.wap.web.service.*;
 
-@WebServlet("/notice/all")
+@WebServlet("/newscenter/all")
 public class NewscenterAll extends HttpServlet {
 
-	public NewscenterAll() {
-		
-	}
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		int pageNo = 1;
 		String field = "title";
 		String query = "";
@@ -42,12 +40,24 @@ public class NewscenterAll extends HttpServlet {
 		
 		NoticeService service = new NoticeService();
 		
-		list = service.getNoticeList(field, query, pageNo);
+		try {
+			list = service.getNoticeList(field, query, pageNo);
+			int count = service.getNoticeCount(field, query);
+			
+			request.setAttribute("list", list);
+			request.setAttribute("count", count);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		request.setAttribute("list", list);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/notice/all.jsp");
 		dispatcher.forward(request, response);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

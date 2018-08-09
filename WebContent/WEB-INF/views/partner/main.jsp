@@ -25,7 +25,6 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <!-- [endif] -->
-
 <script src="../js/partner/main.js"></script>
 
 </head>
@@ -41,17 +40,15 @@
 			<!-- -------main 영역-------------------------------- -->
 			<div class="content">
 				<main>
-				<div class="content-inner">
+				<div class="content-header">
 					<section>
-						<h1 id="head-title-name">마이WAP</h1>
+						<h1>마이WAP</h1>
 						<div class="float-right">
-							<a href="../tutorial/ClientUse" id="main-link">처음 오셨나요? 이용방법을 확인하세요 > </a>
+							<a href="../tutorial/ClientUse" id="main-link">처음 오셨나요? 이용방법을
+								확인하세요 > </a>
 						</div>
 					</section>
 				</div>
-
-
-
 
 				<!-- ----------News Center Area--------- -->
 				<div class="content-inner">
@@ -76,17 +73,18 @@
 						<table>
 							<tbody>
 								<c:forEach var="n" items="${notice}">
-								<tr>
-									<td class="title"><a href="detail?id=${n.id}">${n.title}</a></td>
-									<td class="reg-date"><fmt:formatDate pattern="yyyy.MM.dd" value="${n.reg_date}"/></td>
-								</tr>
+									<tr>
+										<td class="title"><a href="detail?id=${n.id}">${n.title}</a></td>
+										<td class="reg-date"><fmt:formatDate pattern="yyyy.MM.dd"
+												value="${n.reg_date}" /></td>
+									</tr>
 								</c:forEach>
-								
+
 							</tbody>
 						</table>
 					</section>
 					<div class="float-right">
-						<a href="../notice/all" id="more">더 자세히 보기 > </a>
+						<a href="../newscenter/all" id="more">더 자세히 보기 > </a>
 					</div>
 				</div>
 				<!-- ----------News Center Area End--------- -->
@@ -113,21 +111,23 @@
 							</thead>
 							<tbody>
 								<c:forEach var="i" items="${interestedProject}">
-								<tr>
-									<td class="title"><a id="interested-project">${i.title}</a></td>
-									<td class="cost"><fmt:formatNumber pattern="###,###원" value="${i.cost}"/></td>
-									<td class="period">${i.period}일</td>
-									<td class="end-date"><fmt:formatDate pattern="yyyy년 MM월 dd일" value="${i.end_date}"/></td>
-									<td class="heart"><a href="favor?id=${sessionScope.sessionId}"><img
-											src="../images/heart.png" title="'관심 프로젝트'에서 삭제하기"></a></td>
-								</tr>
+									<tr>
+										<td class="title"><a id="interested-project" href="../project/view?id=${i.id}">${i.title}</a></td>
+										<td class="cost"><fmt:formatNumber pattern="###,###원"
+												value="${i.cost}" /></td>
+										<td class="period">${i.period}일</td>
+										<td class="end-date"><fmt:formatDate
+												pattern="yyyy년 MM월 dd일" value="${i.end_date}" /></td>
+										<td class="heart"><a
+											href="main?id=${sessionScope.sessionId}&p_id=${i.id}"><img
+												src="../images/heart.png" title="'관심 프로젝트'에서 삭제하기"></a></td>
+									</tr>
 								</c:forEach>
-								<tr><td><div class="box">${i.content}</div></td></tr>
 							</tbody>
 						</table>
 					</section>
 					<div class="float-right">
-						<a href="" id="more">더 자세히 보기 > </a>
+						<a href="interestedproject" id="more">더 자세히 보기 > </a>
 					</div>
 					<!-- ----------Interested Project Area End--------- -->
 
@@ -150,51 +150,24 @@
 								</tr>
 							</thead>
 							<tbody>
-									<c:forEach var="a" items="${applyProject}">
-								<tr>
-									<td class="title"><a href="detail">${a.title}</a></td>
-									<td class="cost"><fmt:formatNumber pattern="###,###원" value="${a.apply_cost}"/></td>
-									<td class="period">${a.apply_period}일</td>
-									<td class="end-date"><fmt:formatDate pattern="yyyy년 MM월 dd일" value="${a.apply_date}"/></td>
-								</tr>
+								<c:forEach var="a" items="${applyProject}">
+									<tr>
+										<td class="title"><a href="detail">${a.title}</a></td>
+										<td class="cost"><fmt:formatNumber pattern="###,###원"
+												value="${a.apply_cost}" /></td>
+										<td class="period">${a.apply_period}일</td>
+										<td class="end-date"><fmt:formatDate
+												pattern="yyyy년 MM월 dd일" value="${a.apply_date}" /></td>
+									</tr>
 								</c:forEach>
 							</tbody>
 						</table>
 					</section>
 					<div class="float-right">
-						<a href="" id="more">더 자세히 보기 > </a>
+						<a href="applyproject" id="more">더 자세히 보기 > </a>
 					</div>
 					<!-- ----------Apply Project Area End--------- -->
 
-					<br> <br>
-
-					<!-- ----------Meeting Project Area--------- -->
-					<p class="font-weight-bold">
-						<a href="" id="title-link">미팅 예정</a>
-					</p>
-					<section id="meeting-project-table">
-						<h1>미팅 예정</h1>
-						<table>
-							<thead>
-								<tr>
-									<th class="title">프로젝트 제목</th>
-									<th class="cost">미팅 방식</th>
-									<th class="period">미팅 예정 실시</th>
-								</tr>
-							</thead>
-							<tbody>
-									
-								<tr>
-									<td class="title">미팅 예정인 프로젝트가 없습니다.</td>
-								</tr>
-							
-							</tbody>
-						</table>
-					</section>
-					<div class="float-right">
-						<a href="" id="more">더 자세히 보기 > </a>
-					</div>
-					<!-- ----------Meeting Project Area End--------- -->
 					<br> <br>
 					<!-- ----------continuing Project Area--------- -->
 					<p class="font-weight-bold">
@@ -214,16 +187,16 @@
 								</tr>
 							</thead>
 							<tbody>
-									
+
 								<tr>
 									<td class="title">프로젝트 진행 내역이 없습니다.</td>
 								</tr>
-	
+
 							</tbody>
 						</table>
 					</section>
 					<div class="float-right">
-						<a href="" id="more">더 자세히 보기 > </a>
+						<a href="continuingproject" id="more">더 자세히 보기 > </a>
 					</div>
 					<!-- ----------continuing Project Area End--------- -->
 				</div>
@@ -239,7 +212,8 @@
 					<li>
 						<div class="user-name-tag">
 							<h3 class="user-name-tag-heading">파트너스</h3>
-							<a href="../partner/info/edit" class="profile-setting">기본 정보 수정하기 ></a>
+							<a href="../partner/info/edit" class="profile-setting">기본 정보
+								수정하기 ></a>
 							<div class="user-name-body">
 								<img src="../images/default_avatar.jpg" alt=""
 									class="profile-img">
@@ -247,8 +221,8 @@
 								<div class="email">${email}</div>
 							</div>
 						</div>
-					</li>
-					<li>
+					<!-- </li>
+					<li> -->
 						<div class="partner-history">
 							<h1>WAP 히스토리</h1>
 							<div class="partner-history-body">
@@ -256,7 +230,7 @@
 									<tbody>
 										<tr>
 											<th>지원한 프로젝트</th>
-											<td>0 <span class="append-unit">건</span></td>
+											<td>${l.count} <span class="append-unit">건</span></td>
 										</tr>
 										<tr>
 											<th>계약한 프로젝트</th>
@@ -270,10 +244,10 @@
 								</table>
 							</div>
 						</div>
-					</li>
+					<!-- </li>
 
 
-					<li>
+					<li> -->
 						<div class="activity">
 							<h1 class="activity-heading">새로운 소식</h1>
 							<div class="activity-body">

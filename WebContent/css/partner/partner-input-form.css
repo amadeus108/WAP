@@ -23,7 +23,7 @@ body {
 
 /* 인풋 폼 한줄로 세우기 */
 .form-control {
-    width: 50% !important;
+    width: 70% !important;
     height: 34px !important;
     display: inline;
 }
@@ -52,7 +52,7 @@ body {
 .dropdown-customize {
 	float: left;
 	margin-right: 10px;
-	display: inline;
+	display: flex;
 }
 
 .submit-btn {
@@ -159,3 +159,51 @@ body {
 	{
 	margin-top: 6px
 }
+.p5-portfoilo-img-control-wrapper {
+    height: 40px
+}
+
+.p5-img-name {
+    * zoom: 1;
+    * display: inline !important;
+    height: 34px;
+    width: 310px;
+    * width: 300px;
+    padding-left: 10px;
+    padding-top: 5px;
+    border: 1px solid #dedede;
+    display: inline-block;
+    position: absolute;
+    overflow: hidden
+}
+
+.p5-custom-file-type-input, .p5-custom-file-type-front {
+    * zoom: 1;
+    * display: inline !important;
+    display: inline-block;
+    position: absolute;
+    left: 300px
+}
+
+.p5-img-del-btn {
+    * zoom: 1;
+    * display: inline !important;
+    display: inline-block;
+    position: absolute;
+    left: 440px
+}
+
+.p5-custom-file-type-input-wrapper {
+    height: auto
+}
+
+#p5-description {
+    padding-right: 0px;
+    width: 598px
+}
+
+.p5-append-text {
+    font-size: 12px;
+    font-weight: bold
+}
+

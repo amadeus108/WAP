@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.wap.web.entity.Notice;
 import com.wap.web.service.*;
 
-@WebServlet("/notice/detail")
+@WebServlet("/newscenter/detail")
 public class NewscenterDetail extends HttpServlet {
 
 	public NewscenterDetail() {
@@ -27,7 +27,7 @@ public class NewscenterDetail extends HttpServlet {
 			throws ServletException, IOException {
 
 		int pageNo = 1;
-		String field = "title";
+		String field = "category";
 		String query = "";
 
 		List<Notice> list = null;

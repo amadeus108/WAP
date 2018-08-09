@@ -30,9 +30,9 @@
 	<!-- -------header 영역-------------------------------- -->
 	<jsp:include page="../inc/header.jsp" />
 	<!-- -------header 영역 끝------------------------------- -->
-	
-	
-	
+
+
+
 
 	<!-- -------page 영역-------------------------------- -->
 	<div class="page">
@@ -60,62 +60,34 @@
 								type="password" class="form-control" id="formGroupExampleInput2"
 								required="required" name="pwd">
 						</div>
-						
+
 						<div class="textbox-form">
-							<label class="signup-title-element"></label> <input
-										type="radio" name="type" value="client"> <span>클라이언트회원</span>
-										<input
-										type="radio" name="type" value="partner"> <span>파트너스회원</span>
-						</div>
-						
-						<div class="textbox-form">
-							<label class="signup-title-element"></label> <input
-								type="checkbox"> <span>로그인 상태 유지</span>
+							<label class="signup-title-element"></label> <input type="radio"
+								name="type" value="client"> <span>클라이언트회원</span> <input
+								type="radio" name="type" value="partner"> <span>파트너스회원</span>
 						</div>
 
 						<div class="textbox-form">
 							<label class="signup-title-element"></label>
 							<button type="submit" class="btn btn-primary btn-lg btn-block">로그인</button>
 						</div>
-
 						<div class="textbox-form">
 							<label class="signup-title-element"></label>
-							<p id="already-member">
+							<p id="already-member" style="display: flex;">
 								비밀번호를 잊으셨나요? <a href="find_password">비밀번호 찾기</a>
+							
+								아직 회원이 아니신가요? <a href="signup">회원가입</a>
 							</p>
 						</div>
 					</form>
 				</div>
-
-				<!-- -------사이드바 영역-------------------------------- -->
-				<aside class="aside">
-					<form action="/facebook/connect/?facebook_login=1"
-						class="form-horizontal signup-aside-facebook has-validation-callback"
-						id="facebook-connect-form" method="post">
-						<input name="csrfmiddlewaretoken" type="hidden"
-							value="M5Gc083HerECMxpX2dueKiWJ3WvpT6NM"><input
-							name="register_next" type="hidden"
-							value="/accounts/signup/facebook/">
-						<div class="form-group">
-							<div id="already-member">
-								<strong>이미 페이스북으로 가입하셨다면</strong> <a href=""><img
-									alt="페이스북으로 회원가입" src="../images/facebook-login.png"> </a>
-
-							</div>
-						</div>
-					</form>
-					<p id="already-member">
-						아직 회원이 아니신가요? <a href="signup">회원가입</a>
-					</p>
-				</aside>
-				<!-- -------사이드바 영역 끝-------------------------------- -->
 			</div>
 		</div>
 	</div>
-	
+
+
 	<!-- -------footer 영역-------------------------------- -->
 	<jsp:include page="../inc/footer.jsp" />
-	<a href="../admin/adminLogin">a</a>
 </body>
 
 

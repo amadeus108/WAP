@@ -141,7 +141,7 @@ ol > li {
 		#use-menu > ol > li{
 /* 			float: left; */
 			padding-left: 32px;
-			background: url("../images/icon/rightarrow.png") no-repeat 16px center;
+			background: url("../images/rightarrow.png") no-repeat 16px center;
 		}
 		#use-menu > ol > li:first-child{
 			padding-left: 0px;
@@ -150,6 +150,22 @@ ol > li {
 				#use-menu > ol > li > a:hover{
 			color: gold;
 		}
+		
+	.project-add-btn{
+			font-size: 16px;
+			color: #fff;
+			height: 50px;
+			width: 250px;
+		    background-color: #446eab;
+		    border-color: #3d6299;
+		    margin: 10px auto;
+	        padding: 13px 29px;
+	        text-align: center;
+    		vertical-align: middle;
+    		border: 1px solid #dedede;
+    		box-sizing: border-box;
+		}
+		
 .use-menu-box{
 	margin-top: 20px;
 	border-bottom: 1px dashed #dedede;

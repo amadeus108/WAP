@@ -25,14 +25,12 @@
 			<div class="content-inner">
 				<section class="news-center-detail">
 					<div class="news-center-detail-category">
-<%-- 						<c:forEach var="n" items=${list }> --%>
-							<a href="">${n.category }</a>
-<%-- 						</c:forEach> --%>
+						<a href="notice?p=${i}&f=${param.f}&q=${n.category}">${n.category}</a>
+<%-- 						<a href="notice?category=${n.category}">${n.category }</a> --%>
 					</div>
 					<div>
 						<h1 id="news-center-detail-title">
 							${n.title}
-<!-- 							[공지사항] 2018년 설 연휴 위시켓 휴무 안내 -->
 						</h1>
 						<div class="news-center-detail-writer">
 							<ul>
@@ -42,13 +40,6 @@
 						</div>
 						<div class="news-detail-content">
 							${n.content}
-<!-- 							안녕하세요. 위시켓입니다.<br /> -->
-<!-- 							항상 위시켓을 이용해주시는 클라이언트, 파트너님들께 감사의 말씀을 전하며,<br /> -->
-<!-- 							2018년 설 연휴 위시켓 휴무 기간을 안내해 드립니다.<br /> -->
-<!-- 							설 연휴 휴무기간: 2018.02.15 (목) ~ 2018.02.18 (일)<br /> -->
-<!-- 							해당 기간 동안 문의사항은 고객센터 이메일(help@wishket.com)로 보내주시면<br /> -->
-<!-- 							확인 후 영업일인 02월 19일에 빠르게 회신드리겠습니다.<br /> -->
-<!-- 							행복하고 따뜻한 설 연휴 보내시길 바랍니다. 새해 복 많이 받으세요.<br /> -->
 						</div>
 						<div class="news-center-detail-writer">
 							<ul>

@@ -73,8 +73,9 @@ public class Notice {
 	
 
 	//for notice selecting
-	public Notice(String title, Date reg_date) {
+	public Notice(int id,String title, Date reg_date) {
 		super();
+		this.id = id;
 		this.title = title;
 		this.reg_date = reg_date;	
 	}

@@ -1,0 +1,214 @@
+.interest-card-new {
+    background: url("../../images/interest_card_new.png?") no-repeat;
+}
+
+.interest-card-new:hover {
+    background: url("../../images/interest_card_new_hover.png?685a7ceb1176") no-repeat;
+}
+
+.interest-card-counselling {
+    background: url("../../images/interest_card_counselling.png?685a7ceb1176") no-repeat;
+}
+
+.interest-card-counselling:hover {
+    background: url("../../images/interest_card_counselling_hover.png?685a7ceb1176") no-repeat;
+}
+
+.interest-card-close {
+    background: url("../../images/interest_card_close.png?685a7ceb1176") no-repeat;
+}
+
+.interest-card-close:hover {
+    background: url("../../images/interest_card_close_hover.png?685a7ceb1176") no-repeat;
+}
+
+.card-content-detail-toggle {
+    color: #999999;
+    font-size: 11px;
+    line-height: 13px;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.card-content-detail-toggle:hover {
+    cursor: pointer;
+}
+.interest-card {
+    position: relative;
+    padding: 29px 21px 19px 21px;
+    * zoom: 1
+}
+
+.interest-card:before, .interest-card:after {
+    content: " ";
+    display: table;
+    line-height: 0
+}
+
+.interest-card:after {
+    clear: both
+}
+
+.interest-card .icon-margin {
+    margin-right: 5px
+}
+
+.interest-card .interest-add-icon {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    color: #2d3a45
+}
+
+.interest-card .card-left {
+    float: left;
+    width: 530px
+}
+
+.interest-card .card-left .card-title {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2099bb;
+    line-height: 20px
+}
+
+.interest-card .card-left .card-expectation-data {
+    margin-bottom: 41px;
+    line-height: 16px
+}
+
+.interest-card .card-left .card-expectation-data .card-expectation-money {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #dedede;
+    font-weight: bold;
+    color: #666666
+}
+
+.interest-card .card-left .card-expectation-data .card-expectation-money .card-expectation-money-content {
+    margin-left: 5px;
+    color: #535353
+}
+
+.interest-card .card-left .card-expectation-data .card-expectation-date {
+    margin-left: -3px;
+    font-weight: bold;
+    color: #666666
+}
+
+.interest-card .card-left .card-expectation-data .card-expectation-date .card-expectation-date-content {
+    margin-left: 5px;
+    color: #535353
+}
+
+.interest-card .card-left .card-category-data {
+    line-height: 16px
+}
+
+.interest-card .card-left .card-category-data .card-main-category {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #dedede;
+    line-height: 16px
+}
+
+.interest-card .card-left .card-category-data .card-main-category .card-category-title {
+    color: #999999
+}
+
+.interest-card .card-left .card-category-data .card-main-category .card-category-content {
+    color: #666666
+}
+
+.interest-card .card-left .card-category-data .card-sub-category {
+    margin-left: -5px
+}
+
+.interest-card .card-left .card-category-data .card-sub-category .card-category-title {
+    padding-right: 10px;
+    color: #999999
+}
+
+.interest-card .card-left .card-category-data .card-sub-category .card-category-sub-content {
+    color: #434343
+}
+
+.interest-card .card-right {
+    float: right;
+    width: 140px;
+    margin-top: 21px
+}
+
+.interest-card .card-right .interest-card-button {
+    padding-left: 8px;
+    font-size: 13px
+}
+
+.interest-card .card-right .interest-card-button img {
+    margin-top: 1px;
+    margin-right: 5px;
+    vertical-align: top
+}
+
+.interest-card .card-right .card-timestamp {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #dedede;
+    color: #434343;
+    line-height: 15px;
+}
+
+.interest-card .card-right .card-timestamp .card-icon-image {
+    margin-right: 5px;
+    vertical-align: top;
+    line-height: 14px;
+}
+
+.interest-card .card-right .card-timestamp .card-icon-content {
+    font-size: 13px;
+}
+
+.interest-card .card-right .card-applicant-count {
+    line-height: 15px;
+    margin-bottom: 12px;
+    color: #434343;
+}
+
+.interest-card .card-right .card-applicant-count .card-icon-image {
+    margin-right: 5px;
+    vertical-align: top;
+    line-height: 14px;
+}
+
+.interest-card .card-right .card-applicant-count .card-icon-content {
+    font-size: 13px;
+}
+.interest-card .card-right .interest-card-button {
+    padding-left: 8px;
+    font-size: 13px;
+}
+
+.interest-card .card-right .interest-card-button img {
+    margin-top: 1px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.btn-partners {
+    color: #fff;
+    background-color: #07b481;
+    border-color: #069b6f;
+}
+
+.btn-partners:hover, .btn-partners:focus {
+    color: #fff;
+    background-color: #08cd93;
+    border-color: #07b481
+}
+
+.btn-partners:active, .btn-partners.active {
+    color: #fff;
+    background-color: #069b6f;
+    border-color: #05835e
+}

@@ -7,13 +7,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>공지사항</title>
+<title>파트너</title>
 <link href="../css/notice.css" type="text/css" rel="stylesheet" />
 <link href="../css/header.css" type="text/css" rel="stylesheet" />
 <link href="../css/footer.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-
 	<!-- header -->
 	<jsp:include page="../inc/header.jsp" />
 	<!-- main -->
@@ -28,16 +27,17 @@
 			<div class="content-inner">
 				<div id="news-center">
 					<ul id="news-center-tabs">
-						<li id="all"><a href="all">전체보기</a></li>
-						<li id="notice"><a href="notice">공지사항</a></li>
-						<li id="partner"><a href="partner">파트너</a></li>
-						<li id="wap"><a href="">WAP</a></li>
+						<li class="all"><a href="all">전체보기</a></li>
+						<li class="notice"><a href="notice?p=${i}&f=${param.f}&q=${'공지사항'}">공지사항</a></li>
+						<li class="partner active"><a href="partner?p=${i}&f=${param.f}&q=${'파트너'}">파트너</a></li>
+						<li class="wap"><a href="wap?p=${i}&f=${param.f}&q=${'WAP 소식'}">WAP</a></li>
 					</ul>
 				</div>
 
 				<div id="news-center-search">
-					<form>
-						<input type="text" /> <input type="button" value="검색" />
+					<form method="get">
+						<input type="text" name="q" value="${query}"/> 
+						<input type="submit" value="검색" />
 					</form>
 				</div>
 
@@ -69,24 +69,26 @@
 				<h1>페이징</h1>
 				<nav>
 				<ul>
-					<li><a href=""><</a></li>
 					<c:if test="${not empty param.p }">
-						<c:set var="page" value="${param.p }" />
+						<c:set var="page" value="${param.p}" />
 					</c:if>
-					<c:set var="startNum" value="${(page-1)/5*5+1}" />
-					<c:set var="lastNum" value="${(count+9)/10}" />
+					<c:set var="calc" value="${Math.ceil((page+1)/5)}" />
+					
+					<c:set var="startNum" value="${(calc-1)*5+1}" />
+					<c:set var="startNum" value="${fn:replace(startNum, '.0', '')}" />
+
+					<c:set var="lastNum" value="${Math.ceil(count/5)}" />
 					<c:set var="lastNum" value="${lastNum - (lastNum % 1) }" />
 					<c:set var="lastNum" value="${fn:replace(lastNum, '.0', '')}" />
 
-					<h1>${lastNum}</h1>
-					<c:if test="${lastNum < startNum+4 }">
-						<c:set var="lastNum" value="${lastNum }" />
+					<c:if test="${lastNum <= startNum+4 }">
+						<c:set var="lastNum" value="${lastNum}" />
 					</c:if>
-
-					<c:forEach var="i" begin="${startNum}" end="${lastNum }">
-						<li><a href="?p=${i }&f=${param.f }&q=${param.q }">${i+1}</a></li>
-					</c:forEach>
-					<li><a href="">></a></li>
+					<li><a href="?p=${startNum}&f=${param.f}&q=${param.q}"><<</a></li>
+ 					<c:forEach var="i" begin="${startNum}" end="${lastNum}">
+						<li><a href="?p=${i}&f=${param.f}&q=${param.q}">${i}</a></li>
+ 					</c:forEach>
+					<li><a href="?p=${lastNum}&f=${param.f}&q=${param.q}">>></a></li>
 				</ul>
 				</nav> </section>
 			</div>

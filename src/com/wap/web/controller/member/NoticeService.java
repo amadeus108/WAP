@@ -33,7 +33,7 @@ public class NoticeService {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			Connection con = DriverManager.getConnection(url, user, password);
-			String sql = "select title,reg_date from (\r\n" + 
+			String sql = "select id,title,reg_date from (\r\n" + 
 		            "    select rownum num, n.*from(\r\n" + 
 		            "        select * from notice order by reg_date desc\r\n" + 
 		            "    ) n \r\n" + 
@@ -45,7 +45,7 @@ public class NoticeService {
 			ResultSet rs = st.executeQuery();
 
 			while (rs.next()) {
-				Notice notice = new Notice(rs.getString("title"), rs.getDate("reg_date"));
+				Notice notice = new Notice(rs.getInt("id"), rs.getString("title"), rs.getDate("reg_date"));
 				list.add(notice);
 			}
 			rs.close();

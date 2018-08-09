@@ -246,13 +246,14 @@ table {
 }
 
 .sidebar>li {
+    margin-bottom:0px;
 	display: block;
 	padding: 4px 0;
 }
 
 /* --------------메인 영역---------------------- */
 .content {
-	width: 667px;
+	width: 780px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -264,8 +265,9 @@ table {
 }
 
 .content-header {
-	padding: 30px;
-	margin: 30px;
+	width:780px;
+	padding: 15px;
+	margin: 15px;
 	margin-bottom: 5px;
 	background-color: #fff;
 	border-radius: 3px;
@@ -286,8 +288,9 @@ table {
 }
 
 .content-inner {
-	padding: 30px;
-	margin: 30px;
+	width:780px;
+	padding: 15px;
+	margin: 15px;
 	margin-bottom: 5px;
 	background-color: #fff;
 	border-radius: 3px;
@@ -744,7 +747,6 @@ table {
 	width: 667px;
 	margin-left: 10px;
 	margin-right: 10px;
-	border-right: 1px solid #dedede;
 }
 
 .signup-title-element {

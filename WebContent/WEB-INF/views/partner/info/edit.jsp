@@ -22,8 +22,8 @@
 <!-- —[if lt IE 9] -->
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="../../js/partner/edit.js"></script>
 <!-- [endif] -->
-
 </head>
 <body>
 	<!-- -------header 영역-------------------------------- -->
@@ -50,7 +50,8 @@
 
 					<div class="sidebar-nav">
 						<ul>
-							<li class="active"><a href="edit" style="color: #fff;">기본 정보 수정</a></li>
+							<li class="active"><a href="edit" style="color: #fff;">기본
+									정보 수정</a></li>
 							<li class=""><a href="bank-account">계좌 관리</a></li>
 							<li class=""><a href="pwd-edit">비밀번호 변경</a></li>
 						</ul>
@@ -87,230 +88,170 @@
 
 
 					<h4 style="margin-top: 0px;">기본 정보</h4>
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>프로필 사진</label> <img
-							alt="jgh3021 사진" src="../../images/default_avatar.jpg">
-					</div>
-					<br>
-
-
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>파트너 형태</label> <select
-							class="form-control" id="form_of_business"
-							name="form_of_business" required="required"><option
-								selected="" value="individual">개인</option>
-							<option value="team">팀</option>
-							<option value="individual_business">개인 사업자</option>
-							<option value="corporate_business">법인 사업자</option></select>
-					</div>
-					<br>
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>이름</label> <input
-							class="form-control" id="full_name" name="full_name" type="text"
-							value="">
-					</div>
-					<br>
-
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>성별</label>
-						<div class="partner-info-form">
-							<ul>
-								<li><label class="radio-inline" for="gender_1"><input
-										id="gender_1" name="gender" required="required" type="radio"
-										value="m">남성</label></li>
-								<li><label class="radio-inline" for="gender_2"><input
-										id="gender_2" name="gender" required="required" type="radio"
-										value="f">여성</label></li>
-							</ul>
-						</div>
-					</div>
-					<br>
-
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>생년월일</label>
-						<div class="partner-info-form">
-							<div class="control-wrapper">
-								<div class="dropdown-customize">
-									<select class="form-control" name="year"><option
-											value="">연도</option>
-										<%
-											for (int i = 2018; i >= 1942; i--) {
-										%>
-										<option value="<%=i%>"><%=i%></option>
-										<%
-											}
-										%>
-									</select> <select class="form-control" name="month"><option
-											value="">월</option>
-										<%
-											for (int i = 1; i <= 12; i++) {
-										%>
-										<option value="<%=i%>"><%=i%></option>
-										<%
-											}
-										%></select> <select class="form-control" name="day"><option
-											value="">일</option>
-										<%
-											for (int i = 1; i <= 31; i++) {
-										%>
-										<option value="<%=i%>"><%=i%></option>
-										<%
-											}
-										%></select>
-
+					<form method="post" enctype="multipart/form-data">
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>프로필 사진</label>
+							<div class="p5-portfoilo-img-control-wrapper"
+								style="height: 150px;">
+								<div class="control-wrapper"
+									style="width: 351px; margin-left: 0;">
+									<span class="p5-img-name" id="p5-image-name"
+										style="margin-top: 8px;"></span> <span
+										class="p5-custom-file-type-input-wrapper"><button
+											class="btn btn-wishket p5-custom-file-type-front"
+											style="cursor: pointer; background-color: #2099bb;"
+											type="button" id ="btn-img">이미지 변경</button> <input accept="image/*"
+										class="p5-custom-file-type-input" data-exception="yes"
+										id="p5-file-btn" name="pro_image"
+										style="display: none;cursor: pointer; left: 0px; margin-left: 0;"
+										type="file"></span> 
+										<span class="help-block"
+										style="position: relative; top: 85px; font-size: 13px;">이미지
+										파일(.jpg, .jpeg, .png, .gif 등)만 업로드할 수 있습니다.<br>등록한 이미지는
+										WAP에서 프로필 사진으로 사용됩니다.
+									</span>
 								</div>
 							</div>
 						</div>
-					</div>
-					<br>
+						<br>
 
 
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>지역 - 시,
-							도</label> <select class="form-control" data-select-type="location"
-							id="address-sido" name="address_sido"><option value="">시,
-								도</option>
-							<option value="1">서울특별시</option>
-							<option value="2">부산광역시</option>
-							<option value="3">대구광역시</option>
-							<option value="4">인천광역시</option>
-							<option value="5">광주광역시</option>
-							<option value="6">대전광역시</option>
-							<option value="7">울산광역시</option>
-							<option value="8">세종특별자치시</option>
-							<option value="9">경기도</option>
-							<option value="10">강원도</option>
-							<option value="11">충청북도</option>
-							<option value="12">충청남도</option>
-							<option value="13">전라북도</option>
-							<option value="14">전라남도</option>
-							<option value="15">경상북도</option>
-							<option value="16">경상남도</option>
-							<option value="17">제주특별자치도</option>
-							<option value="20">---</option>
-							<option value="18">해외</option></select>
-					</div>
-					<br>
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>세부 지역 -
-							시,군,구</label> <select class="form-control"
-							data-select-type="detail_location" id="sigungu" name="sigungu"
-							required="required" style="display: block;"><option
-								value="">선택</option>
-							<option value="1">강남구</option>
-							<option value="2">강동구</option>
-							<option value="3">강북구</option>
-							<option value="4">강서구</option>
-							<option value="5">관악구</option>
-							<option value="6">광진구</option>
-							<option value="7">구로구</option>
-							<option value="8">금천구</option>
-							<option value="9">노원구</option>
-							<option value="10">도봉구</option>
-							<option value="11">동대문구</option>
-							<option value="12">동작구</option>
-							<option value="13">마포구</option>
-							<option value="14">서대문구</option>
-							<option value="15">서초구</option>
-							<option value="16">성동구</option>
-							<option value="17">성북구</option>
-							<option value="18">송파구</option>
-							<option value="19">양천구</option>
-							<option value="20">영등포구</option>
-							<option value="21">용산구</option>
-							<option value="22">은평구</option>
-							<option value="23">종로구</option>
-							<option value="24">중구</option>
-							<option value="25">중랑구</option></select>
-					</div>
-					<br>
-					<div class="info-input-form">
-						<label class="signup-title-element"><span></span>나머지 주소</label> <input
-							class="form-control" id="addr" name="addr" type="text" value="">
-					</div>
-					<br>
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>세금계산서용
-							이메일</label> <input class="form-control" id="addr" name="addr" type="text"
-							value="">
-					</div>
-					<div class="form-group last-form-group" style="padding-top: 10px;">
-						<div style="float: right">
-							<input class="submit-btn" id="" style="margin-right: 10px;"
-								type="submit" value="등록 완료">
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>파트너 형태</label>
+							<select class="form-control" id="form_of_business" name="type"
+								required="required"><option selected="" value="개인">개인</option>
+								<option value="팀">팀</option>
+								<option value="개인사업자">개인 사업자</option>
+								<option value="법인사업자">법인 사업자</option></select>
 						</div>
-					</div>
-					<h4 style="margin-top: 0px;">연락처 정보</h4>
-					<div class="info-input-form">
-						<label class="signup-title-element"><span>*</span>핸드폰 번호</label> <select
-							class="form-control" id="cell_phone_location"
-							name="cell_phone_location"
-							style="margin-right: 11px; width: 80px;"><option
-								value="local">국내</option>
-							<option value="global">해외</option></select> <span
-							id="cell_phone_local_box" style="display: inline;"><select
-							class="form-control" id="cell_phone_number_code"
-							name="cell_phone_number_code"
-							style="width: 80px; display: inline;"><option
-									value="010">010</option>
-								<option value="011">011</option>
-								<option value="016">016</option>
-								<option value="017">017</option>
-								<option value="018">018</option>
-								<option value="019">019</option></select><span class="form-phone-liner"
-							style="display: inline;">-</span><input class="form-control"
-							data-min-length="3" id="cell_phone_number_middle"
-							name="cell_phone_number_middle" type="text" value=""
-							style="display: inline;"><span class="form-phone-liner"
-							style="display: inline;">-</span><input class="form-control"
-							data-min-length="4" id="cell_phone_number_end"
-							name="cell_phone_number_end" type="text" value=""
-							style="display: inline;"></span>
-
-					</div>
-
-
-					<div class="info-input-form">
-						<label class="signup-title-element">전화번호</label>
-						<div class="control-wrapper">
-							<select class="form-control" data-exception="yes"
-								id="phone_number_code" name="phone_number_code"
-								style="width: 95px;"><option>---</option>
-								<option value="02">02</option>
-								<option value="031">031</option>
-								<option value="032">032</option>
-								<option value="033">033</option>
-								<option value="041">041</option>
-								<option value="042">042</option>
-								<option value="043">043</option>
-								<option value="044">044</option>
-								<option value="051">051</option>
-								<option value="052">052</option>
-								<option value="053">053</option>
-								<option value="054">054</option>
-								<option value="055">055</option>
-								<option value="061">061</option>
-								<option value="062">062</option>
-								<option value="063">063</option>
-								<option value="064">064</option>
-								<option value="070">070</option>
-								<option value="999">해외</option></select><span class="form-phone-liner"
-								style="margin-left: 11px; margin-right: 11px;">-</span><input
-								class="form-control" data-exception="yes"
-								id="phone_number_entered" name="phone_number_entered"
-								style="*width: 190px;" type="text" value="">
+						<br>
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>이름</label> <input
+								class="form-control" id="full_name" name="name" type="text"
+								required="required">
 						</div>
-					</div>
-					<div class="info-input-form">
-						<label class="signup-title-element">팩스 번호</label> <input
-							class="form-control" id="fax" name="fax" type="text" value="">
-					</div>
-					<div class="form-group last-form-group" style="padding-top: 10px;">
-						<div style="float: right">
-							<input class="submit-btn" id="" style="margin-right: 10px;"
-								type="submit" value="등록 완료">
+						<br>
+
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>성별</label>
+							<div class="partner-info-form">
+								<ul>
+									<li><label class="radio-inline" for="gender_1"><input
+											id="gender_1" name="gender" required="required" type="radio"
+											value="남성">남성</label></li>
+									<li><label class="radio-inline" for="gender_2"><input
+											id="gender_2" name="gender" required="required" type="radio"
+											value="여성">여성</label></li>
+								</ul>
+							</div>
 						</div>
-					</div>
+						<br>
+
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>생년월일</label>
+							<div class="partner-info-form">
+								<div class="control-wrapper">
+									<div class="dropdown-customize">
+										<select class="form-control" name="year"><option
+												value="0">연도</option>
+											<%
+												for (int i = 2018; i >= 1942; i--) {
+											%>
+											<option value="<%=i%>"><%=i%></option>
+											<%
+												}
+											%>
+										</select> <select class="form-control" name="month"><option
+												value="0">월</option>
+											<%
+												for (int i = 1; i <= 12; i++) {
+											%>
+											<option value="<%=i%>"><%=i%></option>
+											<%
+												}
+											%></select> <select class="form-control" name="day"><option
+												value="0">일</option>
+											<%
+												for (int i = 1; i <= 31; i++) {
+											%>
+											<option value="<%=i%>"><%=i%></option>
+											<%
+												}
+											%></select>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						
+						
+
+
+
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>지역 - 시,
+								도</label> <select name="addr" id="addr" class="form-control">
+								<option value="0">시,도 선택</option>
+							</select>
+
+
+						</div>
+						<br>
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>세부 지역 -
+								시,군,구</label> <select name="sec_addr" id="sec_addr" class="form-control">
+								<option value="0">시,군,구 선택</option>
+							</select>
+						</div>
+						<br>
+						<div class="info-input-form">
+							<label class="signup-title-element"><span></span>나머지 주소</label> <input
+								class="form-control" id="last_addr" name="last_addr" type="text">
+						</div>
+						<br>
+						<div class="form-group last-form-group" style="padding-top: 10px;">
+							<div style="float: right">
+								<input class="submit-btn" id="" style="margin-right: 10px;"
+									type="submit" value="등록 완료">
+							</div>
+						</div>
+						<h4 style="margin-top: 0px;">연락처 정보</h4>
+						<div class="info-input-form">
+							<label class="signup-title-element"><span>*</span>핸드폰 번호</label>
+							<select class="form-control" id="cell_phone_location"
+								name="cell_phone_location"
+								style="margin-right: 11px; width: 80px;"><option
+									value="local">국내</option>
+								<option value="global">해외</option></select> <span
+								id="cell_phone_local_box" style="display: inline;"><select
+								class="form-control" id="cell_phone_number_code"
+								name="cell_phone_number_code"
+								style="width: 80px; display: inline;"><option
+										value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option></select><span class="form-phone-liner"
+								style="display: inline;">-</span><input class="form-control"
+								data-min-length="3" id="cell_phone_number_middle"
+								name="cell_phone_number_middle" type="text" value=""
+								style="display: inline;"><span class="form-phone-liner"
+								style="display: inline;">-</span><input class="form-control"
+								data-min-length="4" id="cell_phone_number_end"
+								name="cell_phone_number_end" type="text" value=""
+								style="display: inline;"></span>
+
+						</div>
+						<div class="form-group last-form-group" style="padding-top: 10px;">
+							<div style="float: right">
+								<input class="submit-btn" id="" style="margin-right: 10px;"
+									type="submit" value="등록 완료">
+							</div>
+						</div>
+					</form>
 
 
 				</div>

@@ -3,7 +3,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,16 +28,17 @@
 			<div class="content-inner">
 				<div id="news-center">
 					<ul id="news-center-tabs">
-						<li id="all"><a href="all">전체보기</a></li>
-						<li id="notice"><a href="notice">공지사항</a></li>
-						<li id="partner"><a href="partner">파트너</a></li>
-						<li id="wap"><a href="">WAP</a></li>
+						<li class="all active"><a href="all">전체보기</a></li>
+						<li class="notice"><a href="notice?p=${i}&f=${param.f}&q=${'공지사항'}">공지사항</a></li>
+						<li class="partner"><a href="partner?p=${i}&f=${param.f}&q=${'파트너'}">파트너</a></li>
+						<li class="wap"><a href="wap?p=${i}&f=${param.f}&q=${'WAP 소식'}">WAP</a></li>
 					</ul>
 				</div>
 
 				<div id="news-center-search">
-					<form>
-						<input type="text" /> <input type="button" value="검색" />
+					<form method="get">
+						<input type="text" name="q" value="${query}"/> 
+						<input type="submit" value="검색" />
 					</form>
 				</div>
 
@@ -54,10 +54,10 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach var="n" items="${list }">
+						<c:forEach var="n" items="${list}" begin="0" end="4">
 							<tr>
-								<td class="id">${n.id }</td>
-								<td class="tabs">${n.category }</td>
+								<td class="id">${n.id}</td>
+								<td class="tabs">${n.category}</td>
 								<td class="title"><a href="detail?id=${n.id }">${n.title }</a></td>
 								<td class="reg-date">${n.reg_date }</td>
 							</tr>
@@ -70,24 +70,26 @@
 				<h1>페이징</h1>
 				<nav>
 				<ul>
-					<li><a href=""><</a></li>
 					<c:if test="${not empty param.p }">
-						<c:set var="page" value="${param.p }" />
+						<c:set var="page" value="${param.p}" />
 					</c:if>
-					<c:set var="startNum" value="${(page-1)/5*5+1}" />
-					<c:set var="lastNum" value="${(count+9)/10}" />
+					<c:set var="calc" value="${Math.ceil((page+1)/5)}" />
+					
+					<c:set var="startNum" value="${(calc-1)*5+1}" />
+					<c:set var="startNum" value="${fn:replace(startNum, '.0', '')}" />
+
+					<c:set var="lastNum" value="${Math.ceil(count/5)}" />
 					<c:set var="lastNum" value="${lastNum - (lastNum % 1) }" />
 					<c:set var="lastNum" value="${fn:replace(lastNum, '.0', '')}" />
 
-					<h1>${lastNum}</h1>
-					<c:if test="${lastNum < startNum+4 }">
-						<c:set var="lastNum" value="${lastNum }" />
+					<c:if test="${lastNum <= startNum+4 }">
+						<c:set var="lastNum" value="${lastNum}" />
 					</c:if>
-
-					<c:forEach var="i" begin="${startNum}" end="${lastNum }">
-						<li><a href="?p=${i }&f=${param.f }&q=${param.q }">${i+1}</a></li>
-					</c:forEach>
-					<li><a href="">></a></li>
+					<li><a href="?p=${startNum}&f=${param.f}&q=${param.q}"><<</a></li>
+ 					<c:forEach var="i" begin="${startNum}" end="${lastNum}">
+						<li><a href="?p=${i}&f=${param.f}&q=${param.q}">${i}</a></li>
+ 					</c:forEach>
+					<li><a href="?p=${lastNum}&f=${param.f}&q=${param.q}">>></a></li>
 				</ul>
 				</nav> </section>
 			</div>

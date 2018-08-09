@@ -35,7 +35,7 @@ public class login extends HttpServlet {
 		if (login) {
 			session.setAttribute("sessionId", id);
 			response.sendRedirect("../partner/main");
-		} else {
+		} else {    
 			response.sendRedirect("login");
 		}
 

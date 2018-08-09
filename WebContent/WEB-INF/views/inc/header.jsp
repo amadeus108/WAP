@@ -12,13 +12,13 @@
 		<div class="container">
 			<div class="nav-inner">
 				<div id="logo">
-					<a href="">WAP</a>
+					<a href="../Index">WAP</a>
 				</div>
 				<ul class="navbar-left">
 					<li><a href="">프로젝트 등록</a></li>
-					<li><a href="">프로젝트 찾기</a></li>
+					<li><a href="../project/list">프로젝트 찾기</a></li>
 					<li><a href="">파트너스 목록</a></li>
-					<li><a href="">이용방법</a></li>
+					<li><a href="../tutorial/ClientUse">이용방법</a></li>
 				</ul>
 				<div id="alarm">
 					<a href="">알림</a>
